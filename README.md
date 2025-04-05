@@ -1,3 +1,3 @@
-# alamal_test
+# alamal
 
 A new Flutter project.
