@@ -1,0 +1,79 @@
+name: alamal
+description: A new Flutter project.
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=2.19.6 <3.7.12'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+      
+  http:
+  shared_preferences:
+  flutter_svg:
+  slidable_button:
+  table_calendar:
+  dropdown_below:
+  bloc: ^7.2.1
+  flutter_bloc: ^7.3.1
+  dio: ^4.0.4
+  flutter_slidable:
+  pin_code_fields: ^7.3.0
+  flutter_custom_clippers: ^2.1.0
+  sqflite:
+  flutter_zoom_drawer: ^3.0.0
+  image_picker:
+  lottie:
+  just_audio: ^0.9.37
+  flutter_switch:
+  google_sign_in:
+  flutter_facebook_auth:
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/imgs/
+    - assets/fonts/
+    - assets/lottie/
+    - assets/sound/
+    - lib/language/ar.json
+    - lib/language/en.json
+
+  fonts:
+    - family: Tajawal-Regular
+      fonts:
+        - asset: assets/fonts/Tajawal-Regular.ttf
+
+    - family: Tajawal-Medium
+      fonts:
+        - asset: assets/fonts/Tajawal-Medium.ttf
+
+    - family: Tajawal-Bold
+      fonts:
+        - asset: assets/fonts/Tajawal-Bold.ttf
+
+    - family: Poppins-Regular
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+
+    - family: Poppins-Medium
+      fonts:
+        - asset: assets/fonts/Poppins-Medium.ttf
+
+    - family: Poppins-Bold
+      fonts:
+        - asset: assets/fonts/Poppins-Bold.ttf
+
+    - family: Al-Amal
+      fonts:
+        - asset: assets/fonts/Al-Amal.ttf
