@@ -8,9 +8,7 @@ import 'package:alamal/model/cacheHelper.dart';
 import 'package:alamal/model/cubit.dart';
 import 'package:alamal/model/states.dart';
 import 'package:alamal/model/theme_bloc.dart';
-import 'package:alamal/view/pages/doctor_choose.dart';
 import 'package:alamal/view/pages/doctor/doctor_home.dart';
-import 'package:alamal/view/pages/section_choose.dart';
 import 'package:alamal/view/pages/zoom_drawer_home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -34,6 +32,7 @@ class VerifiedEmail extends StatefulWidget {
 class _VerifiedEmailState extends State<VerifiedEmail> {
   var pinCon = TextEditingController();
   var formKey = GlobalKey<FormState>();
+
   // bool isValidate = false;
 
   @override

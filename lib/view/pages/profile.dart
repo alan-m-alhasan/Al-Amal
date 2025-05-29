@@ -1,6 +1,7 @@
 // ignore_for_file: unnecessary_null_comparison, prefer_if_null_operators, unnecessary_string_interpolations, prefer_typing_uninitialized_variables, body_might_complete_normally_nullable, deprecated_member_use
 
 import 'package:alamal/controller/alamal_icons.dart';
+import 'package:alamal/controller/constant.dart';
 import 'package:alamal/controller/custom_button.dart';
 import 'package:alamal/controller/custom_snackbar.dart';
 import 'package:alamal/db/sql_helper.dart';
@@ -13,7 +14,6 @@ import 'package:alamal/model/states.dart';
 import 'package:alamal/model/theme_bloc.dart';
 import 'package:dropdown_below/dropdown_below.dart';
 import 'package:flutter/material.dart';
-import 'package:alamal/controller/constant.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -69,6 +69,7 @@ class _ProfilePageState extends State<ProfilePage> {
 
   final List<DropdownMenuItem> _dropdownTestItem = [];
   var _selectedTest;
+
   List<DropdownMenuItem> buildDropdownTestItems(List testList) {
     List<DropdownMenuItem> items = [];
     for (var i in testList) {
@@ -96,6 +97,7 @@ class _ProfilePageState extends State<ProfilePage> {
 
   IconData suffix = AmalIcons.visible;
   bool isPassVisible = true;
+
   void changePassVisible() {
     setState(() {
       isPassVisible = !isPassVisible;
@@ -169,6 +171,7 @@ class _ProfilePageState extends State<ProfilePage> {
 
   var formKey = GlobalKey<FormState>();
   bool isLoading = false;
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(

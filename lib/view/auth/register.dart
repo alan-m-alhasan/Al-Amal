@@ -34,6 +34,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
   List<DropdownMenuItem> _dropdownTestItem = [];
   var _selectedTest;
+
   List<DropdownMenuItem> buildDropdownTestItems(List testList) {
     List<DropdownMenuItem> items = [];
     for (var i in testList) {
@@ -84,6 +85,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
   var formKey = GlobalKey<FormState>();
   var scaffoldKey = GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -455,8 +457,8 @@ class _RegisterPageState extends State<RegisterPage> {
                                                         });
                                                         UsersAuth()
                                                             .userRegisterChecking(
-                                                          accountType:
-                                                              'user', // 0 Is Type User || 1 Is Type Doctor
+                                                          accountType: 'user',
+                                                          // 0 Is Type User || 1 Is Type Doctor
                                                           userData: users,
                                                           userName: name.text,
                                                           userPassword:

@@ -3,18 +3,17 @@
 
 import 'dart:async';
 
-import 'package:alamal/controller/colors_dialog.dart';
-import 'package:alamal/controller/delete_alert.dart';
-import 'package:alamal/model/theme_bloc.dart';
-import 'package:alamal/view/pages/verify_account.dart';
-import 'package:flutter/material.dart';
-
 import 'package:alamal/controller/alamal_icons.dart';
+import 'package:alamal/controller/colors_dialog.dart';
 import 'package:alamal/controller/constant.dart';
 import 'package:alamal/controller/custom_button.dart';
+import 'package:alamal/controller/delete_alert.dart';
 import 'package:alamal/controller/lang_dialog.dart';
 import 'package:alamal/localization/localization.dart';
 import 'package:alamal/model/cacheHelper.dart';
+import 'package:alamal/model/theme_bloc.dart';
+import 'package:alamal/view/pages/verify_account.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:just_audio/just_audio.dart';

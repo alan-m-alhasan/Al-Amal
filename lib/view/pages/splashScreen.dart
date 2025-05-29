@@ -9,8 +9,8 @@ import 'package:alamal/view/pages/zoom_drawer_home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:lottie/lottie.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:lottie/lottie.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -55,6 +55,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   DatabaseHelper db = DatabaseHelper();
+
   @override
   void initState() {
     super.initState();
@@ -95,10 +96,8 @@ class _SplashScreenState extends State<SplashScreen> {
     });
   }
 }
- // SvgPicture.asset(
-              // logo,
-              //   color: Colors.white,
-              //   width: 300.0,
-              // ),
-
-              
+// SvgPicture.asset(
+// logo,
+//   color: Colors.white,
+//   width: 300.0,
+// ),

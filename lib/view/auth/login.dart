@@ -1,10 +1,11 @@
 // ignore_for_file: unrelated_type_equality_checks, library_private_types_in_public_api, prefer_typing_uninitialized_variables, deprecated_member_use, use_build_context_synchronously
 
-import 'package:alamal/db/users_auth.dart';
 import 'package:alamal/controller/alamal_icons.dart';
 import 'package:alamal/controller/constant.dart';
+import 'package:alamal/controller/custom_button.dart';
 import 'package:alamal/controller/custom_snackbar.dart';
 import 'package:alamal/db/sql_helper.dart';
+import 'package:alamal/db/users_auth.dart';
 import 'package:alamal/localization/localization.dart';
 import 'package:alamal/model/cacheHelper.dart';
 import 'package:alamal/model/cubit.dart';
@@ -13,7 +14,6 @@ import 'package:alamal/model/states.dart';
 import 'package:alamal/model/theme_bloc.dart';
 import 'package:alamal/view/auth/register.dart';
 import 'package:alamal/view/pages/doctor/doctor_home.dart';
-import 'package:alamal/controller/custom_button.dart';
 import 'package:alamal/view/pages/section_choose.dart';
 import 'package:dropdown_below/dropdown_below.dart';
 import 'package:flutter/material.dart';
@@ -43,6 +43,7 @@ class _LoginPageState extends State<LoginPage> {
   var scaffoldKey = GlobalKey<ScaffoldState>();
 
   final List<DropdownMenuItem> _dropdownTestItem = [];
+
   List<DropdownMenuItem> buildDropdownTestItems(List testList) {
     List<DropdownMenuItem> items = [];
     for (var i in testList) {
@@ -63,6 +64,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   List<dynamic> testList = [];
+
   @override
   void initState() {
     db.getUsers().then((data) {
@@ -81,8 +83,6 @@ class _LoginPageState extends State<LoginPage> {
     super.initState();
   }
 
-  // bool isLoading = false;
-  // bool isLoadingLogin = false;
   LoadingStates loadingStates = LoadingStates.loadingNone;
   DatabaseHelper db = DatabaseHelper();
   List<Map<String, dynamic>> users = [];

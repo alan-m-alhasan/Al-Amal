@@ -1,16 +1,16 @@
 // ignore_for_file: file_names, library_private_types_in_public_api, deprecated_member_use
 
 import 'package:alamal/controller/alamal_icons.dart';
+import 'package:alamal/controller/constant.dart';
 import 'package:alamal/localization/localization.dart';
 import 'package:alamal/model/cacheHelper.dart';
 import 'package:alamal/model/theme_bloc.dart';
 import 'package:alamal/model/zoom_drawer_bloc.dart';
-import 'package:alamal/view/pages/doctor/doctor_consultations.dart';
 import 'package:alamal/view/pages/doctor/doctor_appointments.dart';
+import 'package:alamal/view/pages/doctor/doctor_consultations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:alamal/controller/constant.dart';
 
 class DoctorHome extends StatefulWidget {
   const DoctorHome({Key? key}) : super(key: key);
@@ -103,3 +103,11 @@ class _DoctorHomeState extends State<DoctorHome> {
     });
   }
 }
+// signingConfigs {
+// debug {
+// keyAlias 'alamal'
+// keyPassword 'alan9622'
+// storeFile file('alamal.jks')
+// storePassword 'alan9622'
+// }
+// }

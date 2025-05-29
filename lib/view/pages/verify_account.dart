@@ -100,6 +100,7 @@ class _VerifyAccountState extends State<VerifyAccount> {
 
   List<Map<String, dynamic>> accountsData = [];
   DatabaseHelper db = DatabaseHelper();
+
   int getUserIndex() {
     return accountsData.indexWhere(
         (element) => element['userEmail'] == CacheHelper.getData(key: 'email'));

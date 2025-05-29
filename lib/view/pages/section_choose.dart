@@ -8,7 +8,6 @@ import 'package:alamal/model/cubit.dart';
 import 'package:alamal/model/dr_disease.dart';
 import 'package:alamal/model/educate_data.dart';
 import 'package:alamal/model/getDoctors.dart';
-import 'package:alamal/model/google_sign_in_api.dart';
 import 'package:alamal/model/states.dart';
 import 'package:alamal/model/theme_bloc.dart';
 import 'package:alamal/model/zoom_drawer_bloc.dart';

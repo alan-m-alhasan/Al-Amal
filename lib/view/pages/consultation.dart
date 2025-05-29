@@ -48,197 +48,199 @@ class _ConsultationState extends State<Consultation> {
           }
         },
         builder: (context, state) {
-          return BlocBuilder<ThemeBloc, ThemeState>(builder: (context, state) {
-            return SafeArea(
-              child: Scaffold(
-                appBar: AppBar(
-                  backgroundColor: state.color,
-                  elevation: 0.0,
-                  leading: Directionality(
-                    textDirection:
-                        CacheHelper.getData(key: 'languageCode') == 'ar'
-                            ? TextDirection.ltr
-                            : TextDirection.rtl,
-                    child: IconButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                      color: Colors.white,
-                      iconSize: 22.0,
-                      icon: CacheHelper.getData(key: 'languageCode') == 'ar'
-                          ? const Icon(
-                              Icons.arrow_forward_ios_rounded,
-                            )
-                          : const Icon(
-                              Icons.arrow_back_ios_new_rounded,
-                            ),
-                    ),
-                  ),
-                  toolbarHeight: 75.0,
-                  shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(40.0),
-                      bottomRight: Radius.circular(40.0),
-                    ),
-                  ),
-                  titleSpacing: 0.0,
-                  leadingWidth: 65.0,
-                  title: Text(
-                    "${DemoLocalization.of(context)!.getTranslatedValue('writtenConsult')}",
-                    overflow: TextOverflow.visible,
-                    softWrap: true,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 20.0,
-                    ),
-                  ),
-                ),
-                body: NotificationListener<OverscrollIndicatorNotification>(
-                  onNotification: (overscroll) {
-                    overscroll.disallowIndicator();
-                    return true;
-                  },
-                  child: SingleChildScrollView(
-                    child: Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Column(
-                        children: [
-                          const SizedBox(
-                            height: 10.0,
-                          ),
-                          Align(
-                            alignment: AlignmentDirectional.centerStart,
-                            child: Text(
-                              "${DemoLocalization.of(context)!.getTranslatedValue('writeAdv')}",
-                              style: TextStyle(
-                                  fontSize: 22.0,
-                                  fontFamily: CacheHelper.getData(
-                                              key: 'languageCode') ==
-                                          'en'
-                                      ? poppinsMedium
-                                      : tajawalMedium),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 20.0,
-                          ),
-                          Form(
-                            key: formKey,
-                            child: TextFormField(
-                              controller: msg,
-                              cursorColor: state.color,
-                              maxLines: 16,
-                              textInputAction: TextInputAction.newline,
-                              style: const TextStyle(
-                                fontSize: 20.0,
+          return BlocBuilder<ThemeBloc, ThemeState>(
+            builder: (context, state) {
+              return SafeArea(
+                child: Scaffold(
+                  appBar: AppBar(
+                    backgroundColor: state.color,
+                    elevation: 0.0,
+                    leading: Directionality(
+                      textDirection:
+                          CacheHelper.getData(key: 'languageCode') == 'ar'
+                              ? TextDirection.ltr
+                              : TextDirection.rtl,
+                      child: IconButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        color: Colors.white,
+                        iconSize: 22.0,
+                        icon: CacheHelper.getData(key: 'languageCode') == 'ar'
+                            ? const Icon(
+                                Icons.arrow_forward_ios_rounded,
+                              )
+                            : const Icon(
+                                Icons.arrow_back_ios_new_rounded,
                               ),
-                              decoration: InputDecoration(
-                                hintText:
-                                    "${DemoLocalization.of(context)!.getTranslatedValue('hintOfConsultMsg')}",
-                                hintStyle: const TextStyle(
-                                  color: Colors.grey,
+                      ),
+                    ),
+                    toolbarHeight: 75.0,
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(40.0),
+                        bottomRight: Radius.circular(40.0),
+                      ),
+                    ),
+                    titleSpacing: 0.0,
+                    leadingWidth: 65.0,
+                    title: Text(
+                      "${DemoLocalization.of(context)!.getTranslatedValue('writtenConsult')}",
+                      overflow: TextOverflow.visible,
+                      softWrap: true,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.0,
+                      ),
+                    ),
+                  ),
+                  body: NotificationListener<OverscrollIndicatorNotification>(
+                    onNotification: (overscroll) {
+                      overscroll.disallowIndicator();
+                      return true;
+                    },
+                    child: SingleChildScrollView(
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Column(
+                          children: [
+                            const SizedBox(
+                              height: 10.0,
+                            ),
+                            Align(
+                              alignment: AlignmentDirectional.centerStart,
+                              child: Text(
+                                "${DemoLocalization.of(context)!.getTranslatedValue('writeAdv')}",
+                                style: TextStyle(
+                                    fontSize: 22.0,
+                                    fontFamily: CacheHelper.getData(
+                                                key: 'languageCode') ==
+                                            'en'
+                                        ? poppinsMedium
+                                        : tajawalMedium),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 20.0,
+                            ),
+                            Form(
+                              key: formKey,
+                              child: TextFormField(
+                                controller: msg,
+                                cursorColor: state.color,
+                                maxLines: 16,
+                                textInputAction: TextInputAction.newline,
+                                style: const TextStyle(
                                   fontSize: 20.0,
                                 ),
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(25.0),
-                                  borderSide: BorderSide(
-                                    color: Colors.grey[500]!,
+                                decoration: InputDecoration(
+                                  hintText:
+                                      "${DemoLocalization.of(context)!.getTranslatedValue('hintOfConsultMsg')}",
+                                  hintStyle: const TextStyle(
+                                    color: Colors.grey,
+                                    fontSize: 20.0,
                                   ),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(25.0),
-                                  borderSide: BorderSide(
-                                    color: state.color,
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(25.0),
+                                    borderSide: BorderSide(
+                                      color: Colors.grey[500]!,
+                                    ),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(25.0),
+                                    borderSide: BorderSide(
+                                      color: state.color,
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
-                          ),
-                          const SizedBox(
-                            height: 40.0,
-                          ),
-                          !isLoading
-                              ? SlidableButton(
-                                  borderRadius: BorderRadius.circular(20.0),
-                                  isRestart: true,
-                                  onChanged: (slide) {
-                                    if (msg.text.isNotEmpty) {
-                                      setState(() {
-                                        isLoading = true;
-                                      });
-                                      Future.delayed(
-                                        const Duration(seconds: 2),
-                                        () {
-                                          setState(() {
-                                            isLoading = false;
-                                          });
-                                          push(
-                                            context: context,
-                                            page: const ConsultationThanks(),
-                                          );
-                                        },
-                                      );
-                                    } else {
-                                      CustomSnackBar(
-                                        context: context,
-                                        translateKey: 'plzEnterMsg',
-                                      );
-                                    }
-                                  },
-                                  color: state.color.withOpacity(0.2),
-                                  buttonColor: state.color,
-                                  width: fullWidth(context) - 50.0,
-                                  height: 65.0,
-                                  buttonWidth: fullWidth(context) * 0.5,
-                                  label: Container(
-                                    alignment: Alignment.center,
-                                    child: Directionality(
-                                      textDirection: TextDirection.ltr,
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            "${DemoLocalization.of(context)!.getTranslatedValue('send')}",
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 20.0,
-                                                fontFamily: CacheHelper.getData(
-                                                            key:
-                                                                'languageCode') ==
-                                                        'en'
-                                                    ? poppinsMedium
-                                                    : tajawalMedium),
-                                          ),
-                                          const SizedBox(
-                                            width: 14.0,
-                                          ),
-                                          const Icon(
-                                            AmalIcons.send2,
-                                            color: Colors.white,
-                                          ),
-                                        ],
+                            const SizedBox(
+                              height: 40.0,
+                            ),
+                            !isLoading
+                                ? SlidableButton(
+                                    borderRadius: BorderRadius.circular(20.0),
+                                    isRestart: true,
+                                    onChanged: (slide) {
+                                      if (msg.text.isNotEmpty) {
+                                        setState(() {
+                                          isLoading = true;
+                                        });
+                                        Future.delayed(
+                                          const Duration(seconds: 2),
+                                          () {
+                                            setState(() {
+                                              isLoading = false;
+                                            });
+                                            push(
+                                              context: context,
+                                              page: const ConsultationThanks(),
+                                            );
+                                          },
+                                        );
+                                      } else {
+                                        CustomSnackBar(
+                                          context: context,
+                                          translateKey: 'plzEnterMsg',
+                                        );
+                                      }
+                                    },
+                                    color: state.color.withOpacity(0.2),
+                                    buttonColor: state.color,
+                                    width: fullWidth(context) - 50.0,
+                                    height: 65.0,
+                                    buttonWidth: fullWidth(context) * 0.5,
+                                    label: Container(
+                                      alignment: Alignment.center,
+                                      child: Directionality(
+                                        textDirection: TextDirection.ltr,
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
+                                            Text(
+                                              "${DemoLocalization.of(context)!.getTranslatedValue('send')}",
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 20.0,
+                                                  fontFamily: CacheHelper.getData(
+                                                              key:
+                                                                  'languageCode') ==
+                                                          'en'
+                                                      ? poppinsMedium
+                                                      : tajawalMedium),
+                                            ),
+                                            const SizedBox(
+                                              width: 14.0,
+                                            ),
+                                            const Icon(
+                                              AmalIcons.send2,
+                                              color: Colors.white,
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ),
+                                  )
+                                : Container(
+                                    alignment: Alignment.center,
+                                    height: 65.0,
+                                    child: CircularProgressIndicator(
+                                      color: state.color,
+                                    ),
                                   ),
-                                )
-                              : Container(
-                                  alignment: Alignment.center,
-                                  height: 65.0,
-                                  child: CircularProgressIndicator(
-                                    color: state.color,
-                                  ),
-                                ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-            );
-          });
+              );
+            },
+          );
         },
       ),
     );

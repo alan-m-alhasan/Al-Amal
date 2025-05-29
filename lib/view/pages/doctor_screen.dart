@@ -1,21 +1,20 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 // ignore_for_file: avoid_print, unused_import, prefer_typing_uninitialized_variables, deprecated_member_use
 
-import 'package:alamal/controller/custom_button.dart';
-import 'package:alamal/model/theme_bloc.dart';
-import 'package:alamal/view/pages/book_date.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-
 import 'package:alamal/controller/constant.dart';
+import 'package:alamal/controller/custom_button.dart';
 import 'package:alamal/localization/localization.dart';
 import 'package:alamal/model/cacheHelper.dart';
 import 'package:alamal/model/cubit.dart';
 import 'package:alamal/model/states.dart';
+import 'package:alamal/model/theme_bloc.dart';
+import 'package:alamal/view/pages/book_date.dart';
+import 'package:alamal/view/pages/consultation.dart';
 import 'package:alamal/view/pages/drawer.dart';
 import 'package:alamal/view/pages/voiceCall.dart';
-import 'package:alamal/view/pages/consultation.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class DoctorScreen extends StatefulWidget {
   final String name;

@@ -1,6 +1,7 @@
 // ignore_for_file: file_names, deprecated_member_use, library_private_types_in_public_api
 
 import 'package:alamal/controller/alamal_icons.dart';
+import 'package:alamal/controller/constant.dart';
 import 'package:alamal/controller/custom_snackbar.dart';
 import 'package:alamal/localization/localization.dart';
 import 'package:alamal/model/cacheHelper.dart';
@@ -9,7 +10,6 @@ import 'package:alamal/view/pages/callThanks.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:slidable_button/slidable_button.dart';
-import 'package:alamal/controller/constant.dart';
 
 class PayDetails extends StatefulWidget {
   const PayDetails({Key? key}) : super(key: key);
@@ -29,6 +29,7 @@ class _PayDetailsState extends State<PayDetails> {
   TextEditingController cvvCon = TextEditingController();
   var formKey = GlobalKey<FormState>();
   List<TextEditingController> controllers = [];
+
   void onChanged(String value) {
     cardNumber = TextEditingController(
       text: '${numCard1.text}${numCard2.text}${numCard3.text}${numCard4.text}',
