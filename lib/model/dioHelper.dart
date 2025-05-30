@@ -10,9 +10,7 @@ class DioHelper {
       BaseOptions(
         baseUrl: "https://alwadi-center.com/myapp/ludo/public/api/",
         receiveDataWhenStatusError: true,
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: {'Content-Type': 'application/json'},
       ),
     );
   }
@@ -27,10 +25,7 @@ class DioHelper {
       // 'lang': lang,
       // 'Authorization': token,
     };
-    return await dio?.get(
-      url,
-      queryParameters: query,
-    );
+    return await dio?.get(url, queryParameters: query);
   }
 
   static Future<Response?> postData({
@@ -44,10 +39,6 @@ class DioHelper {
       //  'lang': lang,
       'Authorization': token,
     };
-    return await dio?.post(
-      url,
-      queryParameters: query,
-      data: data,
-    );
+    return await dio?.post(url, queryParameters: query, data: data);
   }
 }

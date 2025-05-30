@@ -46,29 +46,29 @@ Widget CustomButton({
       highlightColor: hasChild ? highlightColor : primaryColor.withOpacity(0.2),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(radius),
-        side: hasBorder
-            ? BorderSide(
-                color: primaryColor,
-                width: borderWidth,
-              )
-            : BorderSide.none,
+        side:
+            hasBorder
+                ? BorderSide(color: primaryColor, width: borderWidth)
+                : BorderSide.none,
       ),
-      child: hasChild
-          ? child
-          : Align(
-              alignment: contentAlignment,
-              child: Text(
-                "${DemoLocalization.of(context)!.getTranslatedValue(translateKey.toString())}",
-                textAlign: textAlign,
-                style: TextStyle(
-                  color: titleColor,
-                  fontSize: titleFontSize,
-                  fontFamily: CacheHelper.getData(key: 'languageCode') == 'en'
-                      ? poppinsMedium
-                      : tajawalMedium,
+      child:
+          hasChild
+              ? child
+              : Align(
+                alignment: contentAlignment,
+                child: Text(
+                  "${AppLocalization.of(context)!.getTranslatedValue(translateKey.toString())}",
+                  textAlign: textAlign,
+                  style: TextStyle(
+                    color: titleColor,
+                    fontSize: titleFontSize,
+                    fontFamily:
+                        CacheHelper.getData(key: 'languageCode') == 'en'
+                            ? poppinsMedium
+                            : tajawalMedium,
+                  ),
                 ),
               ),
-            ),
     ),
   );
 }

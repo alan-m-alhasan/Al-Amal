@@ -11,19 +11,18 @@ dynamic CustomSnackBar({
 }) {
   return ScaffoldMessenger.of(context).showSnackBar(
     SnackBar(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12.0),
-      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
       margin: const EdgeInsets.fromLTRB(15.0, 5.0, 15.0, 16.0),
       duration: const Duration(seconds: 2),
       behavior: SnackBarBehavior.floating,
       content: Center(
         child: Text(
-          "${DemoLocalization.of(context)!.getTranslatedValue(translateKey)}",
+          "${AppLocalization.of(context)!.getTranslatedValue(translateKey)}",
           style: TextStyle(
-            fontFamily: CacheHelper.getData(key: 'languageCode') == 'en'
-                ? poppinsMedium
-                : tajawalMedium,
+            fontFamily:
+                CacheHelper.getData(key: 'languageCode') == 'en'
+                    ? poppinsMedium
+                    : tajawalMedium,
           ),
         ),
       ),

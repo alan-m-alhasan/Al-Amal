@@ -68,34 +68,34 @@ class _SplashScreenState extends State<SplashScreen> {
     toneHandling();
     moveWidget();
     Future.delayed(const Duration(milliseconds: 3500), () {
-      pushAndRmvUntil(
-        context: context,
-        page: _widget,
-      );
+      pushAndRmvUntil(context: context, page: _widget);
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<ThemeBloc, ThemeState>(builder: (context, state) {
-      return SafeArea(
-        child: Scaffold(
-          backgroundColor: state.color,
-          body: Center(
-            child: Transform.scale(
-              scale: 3,
-              child: Lottie.asset(
-                lottieLogo,
-                alignment: Alignment.center,
-                repeat: false,
+    return BlocBuilder<ThemeBloc, ThemeState>(
+      builder: (context, state) {
+        return SafeArea(
+          child: Scaffold(
+            backgroundColor: state.color,
+            body: Center(
+              child: Transform.scale(
+                scale: 3,
+                child: Lottie.asset(
+                  lottieLogo,
+                  alignment: Alignment.center,
+                  repeat: false,
+                ),
               ),
             ),
           ),
-        ),
-      );
-    });
+        );
+      },
+    );
   }
 }
+
 // SvgPicture.asset(
 // logo,
 //   color: Colors.white,

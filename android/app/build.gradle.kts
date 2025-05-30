@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.alamal"
+    namespace = "com.alan.alamal"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = "27.0.12077973"
 
@@ -21,22 +21,13 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.example.alamal"
+        applicationId = "com.alan.alamal"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
-    }
-
-    signingConfigs {
-        debug {
-            keyAlias = 'alamal'
-            keyPassword = 'alan9622'
-            storeFile = file('alamal.jks')
-            storePassword = 'alan9622'
-        }
     }
 
     buildTypes {

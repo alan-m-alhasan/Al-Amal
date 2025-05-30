@@ -8,6 +8,7 @@ abstract class ThemeEvent {}
 
 class ChangeTheme extends ThemeEvent {
   final int primaryColor;
+
   ChangeTheme(this.primaryColor);
 }
 
@@ -15,24 +16,21 @@ class ChangeTheme extends ThemeEvent {
 class ThemeState {
   final Color color;
 
-  ThemeState({
-    required this.color,
-  });
+  ThemeState({required this.color});
 }
 
 // Bloc
 class ThemeBloc extends Bloc<ThemeEvent, ThemeState> {
-  ThemeBloc()
-      : super(ThemeState(
-          color: Colors.green,
-        )) {
+  ThemeBloc() : super(ThemeState(color: Colors.green)) {
     _loadLanguage();
 
     on<ChangeTheme>((event, emit) async {
       Color color = Color(event.primaryColor);
 
       await CacheHelper.saveData(
-          key: 'primaryColor', value: event.primaryColor);
+        key: 'primaryColor',
+        value: event.primaryColor,
+      );
       print('Color Palette Selected : $color');
 
       emit(ThemeState(color: color));
@@ -40,7 +38,8 @@ class ThemeBloc extends Bloc<ThemeEvent, ThemeState> {
   }
 
   Future<void> _loadLanguage() async {
-    int primaryColor = CacheHelper.getData(key: 'primaryColor') ??
+    int primaryColor =
+        CacheHelper.getData(key: 'primaryColor') ??
         0xFF009688; // Teal is default color
     print('Loaded Color: $primaryColor');
     emit(ThemeState(color: Color(primaryColor)));

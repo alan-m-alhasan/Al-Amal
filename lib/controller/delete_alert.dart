@@ -22,9 +22,11 @@ class _DeleteAlertState extends State<DeleteAlert> {
   bool isDeleteLoading = false;
   List<Map<String, dynamic>> accountsData = [];
   DatabaseHelper db = DatabaseHelper();
+
   int getUserIndex() {
     return accountsData.indexWhere(
-        (element) => element['userEmail'] == CacheHelper.getData(key: 'email'));
+      (element) => element['userEmail'] == CacheHelper.getData(key: 'email'),
+    );
   }
 
   double _progress = 0.0;
@@ -70,85 +72,89 @@ class _DeleteAlertState extends State<DeleteAlert> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<ThemeBloc, ThemeState>(builder: (context, state) {
-      return AlertDialog(
-        actionsPadding: isDeleteLoading ? EdgeInsets.zero : null,
-        title: Text(
-          "${DemoLocalization.of(context)?.getTranslatedValue('attention')}",
-          style: TextStyle(
-            color: Colors.red[700],
-            fontFamily: CacheHelper.getData(key: 'languageCode') == 'en'
-                ? poppinsMedium
-                : tajawalMedium,
+    return BlocBuilder<ThemeBloc, ThemeState>(
+      builder: (context, state) {
+        return AlertDialog(
+          actionsPadding: isDeleteLoading ? EdgeInsets.zero : null,
+          title: Text(
+            "${AppLocalization.of(context)?.getTranslatedValue('attention')}",
+            style: TextStyle(
+              color: Colors.red[700],
+              fontFamily:
+                  CacheHelper.getData(key: 'languageCode') == 'en'
+                      ? poppinsMedium
+                      : tajawalMedium,
+            ),
           ),
-        ),
-        content: Text(
-          "${DemoLocalization.of(context)?.getTranslatedValue('when_account_del')}",
-          style: TextStyle(
-            fontFamily: CacheHelper.getData(key: 'languageCode') == 'en'
-                ? poppinsMedium
-                : tajawalMedium,
+          content: Text(
+            "${AppLocalization.of(context)?.getTranslatedValue('when_account_del')}",
+            style: TextStyle(
+              fontFamily:
+                  CacheHelper.getData(key: 'languageCode') == 'en'
+                      ? poppinsMedium
+                      : tajawalMedium,
+            ),
           ),
-        ),
-        actions: isDeleteLoading
-            ? [
-                Padding(
-                  padding: const EdgeInsets.only(
-                    top: 54.0,
-                  ),
-                  child: LinearProgressIndicator(
-                    minHeight: 10,
-                    color: Colors.red,
-                    backgroundColor: Colors.red[100],
-                    value: _progress,
-                  ),
-                )
-              ]
-            : [
-                TextButton(
-                  onPressed: isDeleteLoading
-                      ? null
-                      : () {
-                          startProgress();
-                        },
-                  style: ButtonStyle(
-                    overlayColor: MaterialStateProperty.all(
-                      Colors.red[700]?.withOpacity(0.2),
+          actions:
+              isDeleteLoading
+                  ? [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 54.0),
+                      child: LinearProgressIndicator(
+                        minHeight: 10,
+                        color: Colors.red,
+                        backgroundColor: Colors.red[100],
+                        value: _progress,
+                      ),
                     ),
-                  ),
-                  child: Text(
-                    "${DemoLocalization.of(context)?.getTranslatedValue('del')}",
-                    style: TextStyle(
-                      color: Colors.red[700],
-                      fontFamily:
-                          CacheHelper.getData(key: 'languageCode') == 'en'
-                              ? poppinsMedium
-                              : tajawalMedium,
+                  ]
+                  : [
+                    TextButton(
+                      onPressed:
+                          isDeleteLoading
+                              ? null
+                              : () {
+                                startProgress();
+                              },
+                      style: ButtonStyle(
+                        overlayColor: MaterialStateProperty.all(
+                          Colors.red[700]?.withOpacity(0.2),
+                        ),
+                      ),
+                      child: Text(
+                        "${AppLocalization.of(context)?.getTranslatedValue('del')}",
+                        style: TextStyle(
+                          color: Colors.red[700],
+                          fontFamily:
+                              CacheHelper.getData(key: 'languageCode') == 'en'
+                                  ? poppinsMedium
+                                  : tajawalMedium,
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    pop(context: context);
-                  },
-                  style: ButtonStyle(
-                    overlayColor: MaterialStateProperty.all(
-                      state.color.withOpacity(0.2),
+                    TextButton(
+                      onPressed: () {
+                        pop(context: context);
+                      },
+                      style: ButtonStyle(
+                        overlayColor: MaterialStateProperty.all(
+                          state.color.withOpacity(0.2),
+                        ),
+                      ),
+                      child: Text(
+                        "${AppLocalization.of(context)?.getTranslatedValue('cancel')}",
+                        style: TextStyle(
+                          color: state.color,
+                          fontFamily:
+                              CacheHelper.getData(key: 'languageCode') == 'en'
+                                  ? poppinsMedium
+                                  : tajawalMedium,
+                        ),
+                      ),
                     ),
-                  ),
-                  child: Text(
-                    "${DemoLocalization.of(context)?.getTranslatedValue('cancel')}",
-                    style: TextStyle(
-                      color: state.color,
-                      fontFamily:
-                          CacheHelper.getData(key: 'languageCode') == 'en'
-                              ? poppinsMedium
-                              : tajawalMedium,
-                    ),
-                  ),
-                ),
-              ],
-      );
-    });
+                  ],
+        );
+      },
+    );
   }
 }

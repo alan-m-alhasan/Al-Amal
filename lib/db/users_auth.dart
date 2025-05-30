@@ -46,27 +46,15 @@ class UsersAuth {
           page:
               accountType == 'doctor' ? const DoctorHome() : const MainScreen(),
         );
-        CustomSnackBar(
-          context: context,
-          translateKey: 'registerSuccess',
-        );
+        CustomSnackBar(context: context, translateKey: 'registerSuccess');
         CacheHelper.saveData(
           key: 'accountType',
           value: accountType == 'doctor' ? 'doctor' : 'user',
         );
-        CacheHelper.saveData(
-          key: 'email',
-          value: userEmail,
-        );
-        CacheHelper.saveData(
-          key: 'hasLogged',
-          value: true,
-        );
+        CacheHelper.saveData(key: 'email', value: userEmail);
+        CacheHelper.saveData(key: 'hasLogged', value: true);
       } else {
-        CustomSnackBar(
-          context: context,
-          translateKey: 'errorHappened',
-        );
+        CustomSnackBar(context: context, translateKey: 'errorHappened');
       }
     }
   }
@@ -99,10 +87,7 @@ class UsersAuth {
         mounted: mounted,
       );
     } else {
-      CustomSnackBar(
-        context: context,
-        translateKey: 'accountExist',
-      );
+      CustomSnackBar(context: context, translateKey: 'accountExist');
     }
   }
 
@@ -114,10 +99,7 @@ class UsersAuth {
     required bool mounted,
   }) async {
     var res = await db.userAuthenticate(
-      Users(
-        userEmail: userEmail,
-        userPassword: userPassword,
-      ),
+      Users(userEmail: userEmail, userPassword: userPassword),
     );
     // GoogleSignInApi.login();
     if (res == true) {
@@ -127,33 +109,18 @@ class UsersAuth {
           page:
               accountType == 'doctor' ? const DoctorHome() : const MainScreen(),
         );
-        CustomSnackBar(
-          context: context,
-          translateKey: 'enterSuccess',
-        );
+        CustomSnackBar(context: context, translateKey: 'enterSuccess');
         CacheHelper.saveData(
           key: 'accountType',
           value: accountType == 'doctor' ? 'doctor' : 'user',
         );
-        CacheHelper.saveData(
-          key: 'email',
-          value: userEmail,
-        );
-        CacheHelper.saveData(
-          key: 'hasLogged',
-          value: true,
-        );
+        CacheHelper.saveData(key: 'email', value: userEmail);
+        CacheHelper.saveData(key: 'hasLogged', value: true);
       } else {
-        CustomSnackBar(
-          context: context,
-          translateKey: 'errorHappened',
-        );
+        CustomSnackBar(context: context, translateKey: 'errorHappened');
       }
     } else {
-      CustomSnackBar(
-        context: context,
-        translateKey: 'wrongData',
-      );
+      CustomSnackBar(context: context, translateKey: 'wrongData');
     }
     debugPrint(res.toString());
   }
@@ -173,20 +140,19 @@ class UsersAuth {
         page: RegisterWithGoogle(
           name: user!.displayName.toString(),
           email: user.email.toString(),
+          photoUrl: user.photoUrl.toString(),
         ),
       );
     } else if (user == null) {
-      CustomSnackBar(
-        context: context,
-        translateKey: 'errorHappened',
-      );
+      CustomSnackBar(context: context, translateKey: 'errorHappened');
     } else if (userData.any((element) {
           return element.containsValue(user.email.toString());
         }) ==
         true) {
       print('Login ...........');
-      int index =
-          userData.indexWhere((element) => element['userEmail'] == user.email);
+      int index = userData.indexWhere(
+        (element) => element['userEmail'] == user.email,
+      );
       userLogin(
         userPassword: userData[index]['userPassword'],
         userEmail: user.email,
@@ -221,10 +187,7 @@ class UsersAuth {
         context: context,
         mounted: mounted,
       );
-      CustomSnackBar(
-        context: context,
-        translateKey: 'enterSuccess',
-      );
+      CustomSnackBar(context: context, translateKey: 'enterSuccess');
       pushAndRmvUntil(
         context: context,
         page: accountType == 'doctor' ? const DoctorHome() : const MainScreen(),
@@ -253,19 +216,10 @@ class UsersAuth {
         CacheHelper.saveData(key: 'hasLogged', value: false);
         CacheHelper.removeData(key: 'accountType');
         CacheHelper.removeData(key: 'email');
-        pushAndRmvUntil(
-          context: context,
-          page: const LoginPage(),
-        );
-        CustomSnackBar(
-          context: context,
-          translateKey: 'accountDeletedSuccess',
-        );
+        pushAndRmvUntil(context: context, page: const LoginPage());
+        CustomSnackBar(context: context, translateKey: 'accountDeletedSuccess');
       } else {
-        CustomSnackBar(
-          context: context,
-          translateKey: 'errorHappened',
-        );
+        CustomSnackBar(context: context, translateKey: 'errorHappened');
       }
     }
   }
@@ -278,17 +232,11 @@ class UsersAuth {
     var res = await db.updateUserToDoctor(id);
     if (res > 0) {
       if (mounted) {
-        pushAndRmvUntil(
-          context: context,
-          page: const SplashScreen(),
-        );
+        pushAndRmvUntil(context: context, page: const SplashScreen());
         CacheHelper.saveData(key: 'accountType', value: 'doctor');
       }
     } else {
-      CustomSnackBar(
-        context: context,
-        translateKey: 'errorHappened',
-      );
+      CustomSnackBar(context: context, translateKey: 'errorHappened');
     }
   }
 
@@ -318,23 +266,11 @@ class UsersAuth {
     );
     if (res > 0) {
       if (mounted) {
-        CustomSnackBar(
-          context: context,
-          translateKey: 'modify_success',
-        );
-        pushReplacement(
-          context: context,
-          page: const ProfilePage(),
-        );
-        CacheHelper.saveData(
-          key: 'email',
-          value: userEmail,
-        );
+        CustomSnackBar(context: context, translateKey: 'modify_success');
+        pushReplacement(context: context, page: const ProfilePage());
+        CacheHelper.saveData(key: 'email', value: userEmail);
       } else {
-        CustomSnackBar(
-          context: context,
-          translateKey: 'errorHappened',
-        );
+        CustomSnackBar(context: context, translateKey: 'errorHappened');
       }
     }
   }

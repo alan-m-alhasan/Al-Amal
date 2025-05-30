@@ -13,7 +13,7 @@ List<Map<String, dynamic>> educateYourselfTopicsArabic = [
 4. الإعاقات النفسية: اضطرابات مثل الاكتئاب، القلق، والفصام يمكن أن تؤثر بشكل كبير على حياة الأفراد. هذه الإعاقات لا تكون مرئية دائمًا، ولكنها تؤثر على قدرة الشخص على التعامل مع التوتر والضغط النفسي.
 
 من المهم التذكير بأن كل إعاقة هي حالة فريدة، وتؤثر بشكل مختلف على الأفراد. ولذلك، يتطلب الدعم والمساعدة مواقف مرنة ومتكاملة تركز على احتياجات الشخص الفردية.
-"""
+""",
   },
   {
     "title": "أسباب الإعاقات",
@@ -31,7 +31,7 @@ List<Map<String, dynamic>> educateYourselfTopicsArabic = [
 5. العوامل النفسية والاجتماعية: الإجهاد النفسي المزمن أو العوامل الاجتماعية مثل التنمر أو العزلة الاجتماعية يمكن أن تسهم أيضًا في إحداث اضطرابات عقلية أو نفسية تؤدي إلى إعاقة.
 
 إذا كان الشخص يعاني من إعاقة نتيجة لأي من هذه الأسباب، يمكن للأطباء والمتخصصين تقديم العلاج والدعم المناسب له لتحسين نوعية حياته.
-"""
+""",
   },
   {
     "title": "طرق التكيف",
@@ -49,7 +49,7 @@ List<Map<String, dynamic>> educateYourselfTopicsArabic = [
 5. التكيف الاجتماعي: يساعد الأشخاص ذوو الإعاقات على التكيف مع الحياة الاجتماعية من خلال الأنشطة الجماعية مثل الرياضات، الأنشطة الفنية، والفعاليات المجتمعية التي تشجع على المشاركة والاندماج.
 
 التكيف مع الإعاقة لا يعني التوقف عن السعي وراء الأهداف والطموحات، بل هو عملية تكيّف تساعد الأشخاص على الاستمرار في الحياة بشكل فعال وبناء علاقات صحية مع المجتمع.
-"""
+""",
   },
   {
     "title": "حقوق ذوي الاحتياجات الخاصة",
@@ -67,7 +67,7 @@ List<Map<String, dynamic>> educateYourselfTopicsArabic = [
 5. الحق في الحياة المستقلة: يحق للأشخاص ذوي الاحتياجات الخاصة أن يعيشوا حياة مستقلة في بيئة تتوفر فيها الخدمات المساعدة، مثل المساعدة الشخصية في القيام بالأنشطة اليومية.
 
 يجب أن تكون هناك قوانين واضحة ومؤسسات تدعم حقوق ذوي الاحتياجات الخاصة وتضمن عدم تهميشهم في أي مجال من المجالات الحياتية.
-"""
+""",
   },
   {
     "title": "حقوق الرعاية الصحية",
@@ -87,7 +87,7 @@ List<Map<String, dynamic>> educateYourselfTopicsArabic = [
 6. الرعاية المجتمعية والتغذية السليمة: يجب توفير خدمات دعم مجتمعي للأفراد ذوي الإعاقات التي تشمل برامج التغذية السليمة، وخاصة لأولئك الذين يعانون من إعاقات حركية أو ذهنية قد تؤثر على قدرتهم على الحصول على تغذية متوازنة.
 
 إن توفير هذه الحقوق يعد أساسًا لتحقيق العدالة الاجتماعية وضمان رفاهية الأشخاص ذوي الاحتياجات الخاصة في المجتمع.
-"""
+""",
   },
   {
     "title": "قصص نجاح",
@@ -101,7 +101,7 @@ List<Map<String, dynamic>> educateYourselfTopicsArabic = [
 3. قصة مايكل جوردان: يعتبر مايكل جوردان واحدًا من أعظم لاعبي كرة السلة في التاريخ، ولكنه كان يعاني من التحديات في بداية حياته. في الواقع، تم رفضه من فريق كرة السلة في مدرسته الثانوية، ولكن عزيمته وإصراره دفعته للعمل بجد أكبر. أصبح جوردان رمزًا للإرادة والنجاح، وهو الآن مثال يُحتذى به في الكثير من الرياضات.
 
 هذه القصص تلهم الأشخاص ذوي الاحتياجات الخاصة وتُظهر لهم أنه لا يوجد مستحيل عندما يتعلق الأمر بالسعي وراء الأحلام والطموحات.
-"""
+""",
   },
   {
     "title": "كيفية التعامل مع ذوي الاحتياجات الخاصة",
@@ -119,7 +119,7 @@ List<Map<String, dynamic>> educateYourselfTopicsArabic = [
 5. توعية المجتمع: من الضروري توعية المجتمع بخصوص كيفية التعامل مع ذوي الاحتياجات الخاصة، من خلال توفير ورش عمل أو نشر معلومات تؤكد على أهمية التسامح والاحترام.
 
 إن معاملة ذوي الاحتياجات الخاصة بتفهم واحترام يعزز من شعورهم بالانتماء والمساواة في المجتمع.
-"""
+""",
   },
   {
     "title": "أخطاء شائعة يجب تجنبها",
@@ -137,7 +137,7 @@ List<Map<String, dynamic>> educateYourselfTopicsArabic = [
 5. التعامل مع الإعاقة كأنها عائق دائم: يجب أن نتذكر أن الأشخاص ذوي الإعاقة لا يعتبرون إعاقتهم عائقًا دائمًا أمام طموحاتهم. الإعاقة هي مجرد تحدٍ يمكن التغلب عليه باستخدام الأدوات المناسبة والدعم الكافي.
 
 تجنب هذه الأخطاء يسهم في خلق بيئة من الشمولية والاحترام والعدالة لذوي الاحتياجات الخاصة.
-"""
+""",
   },
   {
     "title": "التطبيقات المفيدة",
@@ -155,7 +155,7 @@ List<Map<String, dynamic>> educateYourselfTopicsArabic = [
 5. تطبيقات التعلم: تقدم العديد من التطبيقات التربوية التعليمية التي تساعد الأشخاص ذوي الإعاقات العقلية أو الحركية على تحسين مهاراتهم الأكاديمية. من خلال تقديم مناهج تعليمية مرنة وتفاعلية.
 
 تطبيقات التكنولوجيا تلعب دورًا كبيرًا في تمكين الأشخاص ذوي الاحتياجات الخاصة وتحسين جودة حياتهم.
-"""
+""",
   },
   {
     "title": "أحدث الأدوات المساعدة",
@@ -173,7 +173,7 @@ List<Map<String, dynamic>> educateYourselfTopicsArabic = [
 5. التكنولوجيا المساعدة في التعليم: تم تطوير أدوات تكنولوجية متخصصة لتوفير بيئات تعليمية شاملة، مثل البرمجيات التي تدعم التعلم السمعي أو البصري، وتلك التي تساعد في التعليم المتعدد الحواس. تساعد هذه الأدوات في تحسين فرص التعلم للأشخاص ذوي الإعاقات التعليمية أو الإدراكية.
 
 الأدوات المساعدة تمثل أداة حيوية لتمكين الأشخاص ذوي الاحتياجات الخاصة، مما يعزز قدراتهم على المشاركة في الحياة اليومية بكل سلاسة.
-"""
+""",
   },
   {
     "title": "تمارين رياضية مناسبة",
@@ -191,7 +191,7 @@ List<Map<String, dynamic>> educateYourselfTopicsArabic = [
 5. تمارين لذوي الأمراض المزمنة: الأشخاص الذين يعانون من أمراض مزمنة مثل التصلب المتعدد أو مرض باركنسون يمكنهم ممارسة تمارين تقوية العضلات مثل تمارين المقاومة أو تمارين التنقل التي تساعد على تعزيز الحركة وتحسين التوازن.
 
 ممارسة التمارين الرياضية تعمل على تحسين الصحة العامة وتزيد من قدرة الشخص ذي الإعاقة على التفاعل بشكل أفضل مع الحياة اليومية.
-"""
+""",
   },
   {
     "title": "نصائح غذائية",
@@ -209,7 +209,7 @@ List<Map<String, dynamic>> educateYourselfTopicsArabic = [
 5. شرب الكثير من الماء: الحفاظ على الترطيب الجيد يعد من الأساسيات لأي شخص، خاصة لأولئك الذين قد يعانون من تحديات في الحركة أو في حالات صحية خاصة. شرب الماء بانتظام يعزز من وظائف الجسم ويساعد على الوقاية من الجفاف.
 
 من خلال اتباع هذه النصائح الغذائية، يمكن للأشخاص ذوي الاحتياجات الخاصة تحسين صحتهم العامة والاستمتاع بحياة أكثر نشاطًا.
-"""
+""",
   },
   {
     "title": "التغلب على التحديات النفسية",
@@ -227,7 +227,7 @@ List<Map<String, dynamic>> educateYourselfTopicsArabic = [
 5. طلب الدعم النفسي المتخصص: في بعض الحالات، قد يحتاج الأشخاص ذوو الاحتياجات الخاصة إلى مساعدة متخصصة مثل العلاج النفسي أو الاستشارة. المعالج النفسي يمكنه تقديم تقنيات للتعامل مع القلق والاكتئاب وتوفير بيئة آمنة للتعبير عن المشاعر.
 
 التغلب على التحديات النفسية يحتاج إلى جهد مستمر، ولكنه ممكن بوجود الدعم المناسب والتقنيات الصحيحة.
-"""
+""",
   },
   {
     "title": "الدعم النفسي للعائلات",
@@ -245,7 +245,7 @@ List<Map<String, dynamic>> educateYourselfTopicsArabic = [
 5. الاستفادة من مجموعات الدعم: العديد من العائلات تجد الراحة والدعم في الانضمام إلى مجموعات الدعم للأسر التي لديها أفراد ذوي احتياجات خاصة. هذه المجموعات توفر بيئة تشارك تجاربهم ومشاعرهم، وتساعد في تقليل الشعور بالوحدة.
 
 الدعم النفسي للعائلة يسهم بشكل كبير في تمكينهم من تقديم الدعم اللازم لفردهم ذو الإعاقة، مما يعزز التكيف الإيجابي مع الحياة.
-"""
+""",
   },
   {
     "title": "اختبارات وحقائق",
@@ -263,7 +263,7 @@ List<Map<String, dynamic>> educateYourselfTopicsArabic = [
 5. تكنولوجيا المساعدة: تشير العديد من الدراسات إلى أن التكنولوجيا الحديثة قد حسنت بشكل كبير حياة الأشخاص ذوي الاحتياجات الخاصة. من خلال الأدوات المساعدة مثل الأجهزة السمعية والذكية، أصبحت لديهم القدرة على التفاعل مع العالم بشكل أكثر فعالية.
 
 اختبارات وحقائق مثل هذه تساعد في بناء مجتمع أكثر شمولًا وتفهّمًا لاحتياجات الأشخاص ذوي الاحتياجات الخاصة.
-"""
+""",
   },
   {
     "title": "أسئلة وأجوبة تفاعلية",
@@ -286,8 +286,8 @@ List<Map<String, dynamic>> educateYourselfTopicsArabic = [
 من أبرز التحديات التي يواجهها الأشخاص ذوو الإعاقة هي الوصول إلى الخدمات الصحية والتعليمية، بالإضافة إلى القضايا المتعلقة بالدمج الاجتماعي.
 
 الأسئلة التفاعلية تساعد في زيادة الفهم والإدراك حول التحديات والفرص التي يمكن توفيرها للأشخاص ذوي الاحتياجات الخاصة.
-"""
-  }
+""",
+  },
 ];
 
 List<Map<String, dynamic>> educateYourselfTopicsEnglish = [
@@ -305,7 +305,7 @@ A disability is a condition that reduces a person's ability to perform certain l
 4. Psychological disabilities: Disorders such as depression, anxiety, and schizophrenia can significantly impact an individual’s life. These disabilities are not always visible, but they affect a person’s ability to cope with stress and pressure.
 
 It is important to remember that each disability is unique and affects individuals differently. Therefore, support and assistance require flexible and integrated approaches that focus on the individual’s needs.
-"""
+""",
   },
   {
     "title": "Causes of Disabilities",
@@ -323,7 +323,7 @@ There are many causes that can lead to disability, some of which are genetic, ot
 5. Psychosocial factors: Chronic psychological stress or social factors such as bullying or social isolation can also contribute to mental or psychological disorders that lead to disability.
 
 If a person has a disability due to any of these reasons, doctors and specialists can provide appropriate treatment and support to improve their quality of life.
-"""
+""",
   },
   {
     "title": "Methods of adaptation",
@@ -341,7 +341,7 @@ Adapting to disability includes a range of methods that help a person cope with 
 5. Social adaptation: People with disabilities are helped to adapt to social life through group activities such as sports, artistic activities, and community events that encourage participation and inclusion.
 
 Adapting to a disability does not mean stopping the pursuit of goals and ambitions, but rather it is an adaptation process that helps people continue to live effectively and build healthy relationships with the community.
-"""
+""",
   },
   {
     "title": "Rights of persons with disabilities",
@@ -359,7 +359,7 @@ Ensuring the rights of persons with disabilities is an essential part of achievi
 5. The right to independent living: People with special needs have the right to live independently in an environment where assistive services, such as personal assistance in performing daily activities, are available.
 
 There must be clear laws and institutions that support the rights of people with special needs and ensure that they are not marginalized in any area of ​​life.
-"""
+""",
   },
   {
     "title": "Healthcare rights",
@@ -379,7 +379,7 @@ Healthcare rights are an essential part of human rights, and all individuals, in
 6. Community care and proper nutrition: Community support services must be provided to individuals with disabilities, including proper nutrition programs, especially for those with motor or mental disabilities that may affect their ability to obtain a balanced diet.
 
 Providing these rights is essential to achieving social justice and ensuring the well-being of people with special needs in society.
-"""
+""",
   },
   {
     "title": "Success Stories",
@@ -393,7 +393,7 @@ Success stories are one of the most inspiring ways to show how people with speci
 3. Michael Jordan's Story: Michael Jordan is considered one of the greatest basketball players in history, but he suffered from challenges at the beginning of his life. In fact, he was rejected from his high school basketball team, but his determination and persistence pushed him to work harder. Jordan became a symbol of will and success, and is now a role model in many sports.
 
 These stories inspire people with special needs and show them that nothing is impossible when it comes to pursuing dreams and ambitions.
-"""
+""",
   },
   {
     "title": "How to deal with people with special needs",
@@ -411,7 +411,7 @@ Dealing with people with special needs requires a deep understanding of the requ
 5. Community Awareness: It is necessary to raise awareness in the community about how to deal with people with special needs, by providing workshops or disseminating information that emphasizes the importance of tolerance and respect.
 
 Treating people with special needs with understanding and respect enhances their sense of belonging and equality in society.
-"""
+""",
   },
   {
     "title": "Common Mistakes to Avoid",
@@ -429,7 +429,7 @@ There are many common mistakes that people make when dealing with people with sp
 5. Treating disability as a permanent obstacle: We must remember that people with disabilities do not see their disability as a permanent barrier to their ambitions. Disability is simply a challenge that can be overcome with the right tools and adequate support.
 
 Avoiding these mistakes contributes to creating an environment of inclusiveness, respect and justice for people with disabilities.
-"""
+""",
   },
   {
     "title": "Useful Apps",
@@ -447,7 +447,7 @@ Technology plays a pivotal role in improving the lives of people with special ne
 5. Learning Applications: Many educational applications are provided that help people with mental or motor disabilities improve their academic skills. By providing flexible and interactive educational curricula.
 
 Technology applications play a major role in empowering people with special needs and improving their quality of life.
-"""
+""",
   },
   {
     "title": "Latest Assistive Tools",
@@ -465,7 +465,7 @@ In the modern era, many assistive tools have emerged that aim to improve the liv
 5. Assistive technology in education: Specialized technological tools have been developed to provide comprehensive educational environments, such as software that supports auditory or visual learning, and those that help in multi-sensory education. These tools help improve learning opportunities for people with learning or cognitive disabilities.
 
 Assistive devices are a vital tool for empowering people with disabilities, enhancing their ability to participate in everyday life with ease.
-"""
+""",
   },
   {
     "title": "Appropriate Exercises",
@@ -483,7 +483,7 @@ Exercising is one of the important activities that contribute to improving the h
 5. Exercises for people with chronic diseases: People with chronic diseases such as multiple sclerosis or Parkinson's disease can do muscle strengthening exercises such as resistance exercises or mobility exercises that help enhance movement and improve balance.
 
 Exercising improves overall health and increases the ability of the person with a disability to better interact with daily life.
-"""
+""",
   },
   {
     "title": "Nutritional Tips",
@@ -501,7 +501,7 @@ Proper nutrition plays a major role in the health of people with special needs, 
 5. Drink plenty of water: Maintaining good hydration is essential for anyone, especially those who may have mobility challenges or special health conditions. Drinking water regularly enhances body functions and helps prevent dehydration.
 
 By following these nutritional tips, people with special needs can improve their overall health and enjoy a more active life.
-"""
+""",
   },
   {
     "title": "Overcoming Psychological Challenges",
@@ -519,7 +519,7 @@ People with special needs face many psychological challenges that may be related
 5. Seeking specialized psychological support: In some cases, people with special needs may need specialized help such as psychotherapy or counseling. A psychotherapist can provide techniques for dealing with anxiety and depression and provide a safe environment to express feelings.
 
 Overcoming psychological challenges requires continuous effort, but it is possible with the right support and techniques.
-"""
+""",
   },
   {
     "title": "Psychological support for families",
@@ -537,7 +537,7 @@ The family is the essential part of the support system for any person with speci
 5. Taking advantage of support groups: Many families find comfort and support in joining support groups for families with individuals with special needs. These groups provide an environment in which to share their experiences and feelings, and help reduce feelings of loneliness.
 
 Psychological support for the family contributes greatly to enabling them to provide the necessary support to their disabled member, which enhances positive adaptation to life.
-"""
+""",
   },
   {
     "title": "Tests and Facts",
@@ -555,7 +555,7 @@ People with special needs face many challenges in their daily lives, but they al
 5. Assistive Technology: Many studies show that modern technology has greatly improved the lives of people with disabilities. Through assistive devices such as hearing and smart devices, they have the ability to interact with the world more effectively.
 
 Tests and facts like these help build a more inclusive society that understands the needs of people with disabilities.
-"""
+""",
   },
   {
     "title": "Interactive Q&A",
@@ -578,6 +578,6 @@ Of course, many people with disabilities can play sports in ways that suit their
 The most prominent challenges facing people with disabilities are access to health and education services, in addition to issues related to social inclusion.
 
 Interactive questions help increase understanding and awareness of the challenges and opportunities that can be provided to people with special needs.
-"""
-  }
+""",
+  },
 ];

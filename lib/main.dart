@@ -20,15 +20,9 @@ void main() async {
   runApp(
     MultiBlocProvider(
       providers: [
-        BlocProvider(
-          create: (context) => LanguageBloc(),
-        ),
-        BlocProvider(
-          create: (context) => ThemeBloc(),
-        ),
-        BlocProvider(
-          create: (context) => DrawerCubit(),
-        ),
+        BlocProvider(create: (context) => LanguageBloc()),
+        BlocProvider(create: (context) => ThemeBloc()),
+        BlocProvider(create: (context) => DrawerCubit()),
       ],
       child: const MyApp(),
     ),
@@ -48,15 +42,13 @@ class MyApp extends StatelessWidget {
               debugShowCheckedModeBanner: false,
               theme: ThemeData(
                 fontFamily: state.fontFamily,
+                useMaterial3: false,
               ),
               home: const SplashScreen(),
               locale: state.locale,
-              supportedLocales: const [
-                Locale('en'),
-                Locale('ar'),
-              ],
+              supportedLocales: const [Locale('en'), Locale('ar')],
               localizationsDelegates: const [
-                DemoLocalization.delegate,
+                AppLocalization.delegate,
                 GlobalMaterialLocalizations.delegate,
                 GlobalWidgetsLocalizations.delegate,
                 GlobalCupertinoLocalizations.delegate,
@@ -64,7 +56,9 @@ class MyApp extends StatelessWidget {
               localeResolutionCallback: (deviceLocale, supportedLocales) {
                 if (CacheHelper.getData(key: 'languageCode') == null) {
                   CacheHelper.saveData(
-                      key: 'languageCode', value: deviceLocale?.languageCode);
+                    key: 'languageCode',
+                    value: deviceLocale?.languageCode,
+                  );
                 }
                 if (CacheHelper.getData(key: 'languageCode') == 'ar') {
                   return supportedLocales.last;

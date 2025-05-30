@@ -1,7 +1,5 @@
 // ignore_for_file: non_constant_identifier_names, file_names
 
-import 'package:flutter/cupertino.dart';
-
 class UserData {
   late int id;
   late String name;

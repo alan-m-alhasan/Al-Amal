@@ -36,37 +36,27 @@ class CallThanks extends StatelessWidget {
                           width: 250.0,
                           color: state.color,
                         ),
-                        const SizedBox(
-                          height: 20.0,
-                        ),
+                        const SizedBox(height: 20.0),
                         Text(
-                          "${DemoLocalization.of(context)!.getTranslatedValue('thanks')}",
+                          "${AppLocalization.of(context)!.getTranslatedValue('thanks')}",
                           style: TextStyle(
-                              fontSize: 30.0,
-                              fontFamily:
-                                  CacheHelper.getData(key: 'languageCode') ==
-                                          'en'
-                                      ? poppinsMedium
-                                      : tajawalMedium),
+                            fontSize: 30.0,
+                            fontFamily:
+                                CacheHelper.getData(key: 'languageCode') == 'en'
+                                    ? poppinsMedium
+                                    : tajawalMedium,
+                          ),
                         ),
-                        const SizedBox(
-                          height: 10.0,
-                        ),
+                        const SizedBox(height: 10.0),
                         Text(
-                          "${DemoLocalization.of(context)!.getTranslatedValue('successYourReq')}",
+                          "${AppLocalization.of(context)!.getTranslatedValue('successYourReq')}",
                           textAlign: TextAlign.center,
-                          style: const TextStyle(
-                            fontSize: 20.0,
-                          ),
+                          style: const TextStyle(fontSize: 20.0),
                         ),
-                        const SizedBox(
-                          height: 5.0,
-                        ),
+                        const SizedBox(height: 5.0),
                         Text(
-                          "${DemoLocalization.of(context)!.getTranslatedValue('weHappy')}",
-                          style: const TextStyle(
-                            fontSize: 20.0,
-                          ),
+                          "${AppLocalization.of(context)!.getTranslatedValue('weHappy')}",
+                          style: const TextStyle(fontSize: 20.0),
                         ),
                       ],
                     ),
@@ -85,9 +75,7 @@ class CallThanks extends StatelessWidget {
                           translateKey: 'back',
                           titleColor: state.color,
                         ),
-                        const SizedBox(
-                          height: 16.0,
-                        ),
+                        const SizedBox(height: 16.0),
                         CustomButton(
                           primaryColor: state.color,
                           context: context,

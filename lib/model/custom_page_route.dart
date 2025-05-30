@@ -21,21 +21,24 @@ class CustomPageRoute extends PageRouteBuilder {
     required this.duration,
     this.choice,
   }) : super(
-          transitionDuration: duration,
-          reverseTransitionDuration: duration,
-          pageBuilder: (context, animation, secondaryAnimation) => child,
-        );
+         transitionDuration: duration,
+         reverseTransitionDuration: duration,
+         pageBuilder: (context, animation, secondaryAnimation) => child,
+       );
 
   @override
-  Widget buildTransitions(BuildContext context, Animation<double> animation,
-          Animation<double> secondaryAnimation, Widget child) =>
-      SlideTransition(
-        position: Tween<Offset>(
-          begin: getBeginOffset(),
-          end: Offset.zero,
-        ).animate(animation),
-        child: child,
-      );
+  Widget buildTransitions(
+    BuildContext context,
+    Animation<double> animation,
+    Animation<double> secondaryAnimation,
+    Widget child,
+  ) => SlideTransition(
+    position: Tween<Offset>(
+      begin: getBeginOffset(),
+      end: Offset.zero,
+    ).animate(animation),
+    child: child,
+  );
 
   Offset? getBeginOffset() {
     switch (direction) {

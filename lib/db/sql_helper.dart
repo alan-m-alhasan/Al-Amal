@@ -92,9 +92,13 @@ class DatabaseHelper {
     final databasePath = await getDatabasesPath();
     final path = join(databasePath, usersDB_name);
     debugPrint(path.toString());
-    return openDatabase(path, version: 1, onCreate: (db, version) async {
-      await db.execute(users);
-    });
+    return openDatabase(
+      path,
+      version: 1,
+      onCreate: (db, version) async {
+        await db.execute(users);
+      },
+    );
   }
 
   // Delete Database
@@ -108,7 +112,8 @@ class DatabaseHelper {
   Future<bool> userAuthenticate(Users users) async {
     final Database db = await initUsersDB();
     var res = await db.rawQuery(
-        "select * from users where userEmail = '${users.userEmail}' AND userPassword = '${users.userPassword}'");
+      "select * from users where userEmail = '${users.userEmail}' AND userPassword = '${users.userPassword}'",
+    );
     if (res.isNotEmpty) {
       return true;
     } else {
@@ -132,7 +137,8 @@ class DatabaseHelper {
   Future<int> updateUserToDoctor(int id) async {
     final Database db = await initUsersDB();
     return db.rawUpdate(
-        "UPDATE users SET accountType = 'doctor' WHERE userId = $id");
+      "UPDATE users SET accountType = 'doctor' WHERE userId = $id",
+    );
   }
 
   // User Update To Doctor

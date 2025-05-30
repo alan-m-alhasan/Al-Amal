@@ -10,8 +10,10 @@ class AmalIcons {
   static const IconData applePay = IconData(0xe904, fontFamily: _fontFamily);
   static const IconData calendar2 = IconData(0xe905, fontFamily: _fontFamily);
   static const IconData call = IconData(0xe906, fontFamily: _fontFamily);
-  static const IconData deleteAccount =
-      IconData(0xe907, fontFamily: _fontFamily);
+  static const IconData deleteAccount = IconData(
+    0xe907,
+    fontFamily: _fontFamily,
+  );
   static const IconData document = IconData(0xe908, fontFamily: _fontFamily);
   static const IconData earth = IconData(0xe909, fontFamily: _fontFamily);
   static const IconData facebook = IconData(0xe90a, fontFamily: _fontFamily);

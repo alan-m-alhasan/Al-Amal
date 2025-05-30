@@ -10,18 +10,8 @@ class Language {
 
   static List<Language> languageList() {
     return <Language>[
-      Language(
-        1,
-        'English',
-        'en',
-        poppinsMedium,
-      ),
-      Language(
-        2,
-        'العربية',
-        'ar',
-        tajawalMedium,
-      ),
+      Language(1, 'English', 'en', poppinsMedium),
+      Language(2, 'العربية', 'ar', tajawalMedium),
     ];
   }
 }
