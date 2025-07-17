@@ -11,7 +11,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class ConsultationThanks extends StatelessWidget {
-  const ConsultationThanks({Key? key}) : super(key: key);
+  const ConsultationThanks({super.key});
 
   @override
   Widget build(BuildContext context) {

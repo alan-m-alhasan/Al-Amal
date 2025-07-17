@@ -17,7 +17,7 @@ import 'package:slidable_button/slidable_button.dart';
 enum PaymentMethod { credit, stc, apple, nothing }
 
 class PayMethod extends StatefulWidget {
-  const PayMethod({Key? key}) : super(key: key);
+  const PayMethod({super.key});
 
   @override
   _PayMethodState createState() => _PayMethodState();

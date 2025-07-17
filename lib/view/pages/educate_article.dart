@@ -10,8 +10,7 @@ class EducateArticle extends StatefulWidget {
   final String title;
   final String article;
 
-  const EducateArticle({Key? key, required this.title, required this.article})
-    : super(key: key);
+  const EducateArticle({super.key, required this.title, required this.article});
 
   @override
   State<EducateArticle> createState() => _EducateArticleState();

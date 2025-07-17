@@ -159,9 +159,9 @@ class _ProfilePageState extends State<ProfilePage> {
       }
     } else {
       if (profileData[getUserIndex()]['userGender'] == 'male') {
-        return SvgPicture.asset(avatarDrMale);
+        return SvgPicture.asset(doctorMale);
       } else {
-        return SvgPicture.asset(avatarDrFemale);
+        return SvgPicture.asset(doctorFemale);
       }
     }
   }

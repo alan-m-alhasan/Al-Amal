@@ -13,7 +13,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:slidable_button/slidable_button.dart';
 
 class PayDetails extends StatefulWidget {
-  const PayDetails({Key? key}) : super(key: key);
+  const PayDetails({super.key});
 
   @override
   _PayDetailsState createState() => _PayDetailsState();

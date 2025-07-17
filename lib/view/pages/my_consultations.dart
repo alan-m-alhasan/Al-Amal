@@ -12,7 +12,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class MyConsultations extends StatefulWidget {
-  const MyConsultations({Key? key}) : super(key: key);
+  const MyConsultations({super.key});
 
   @override
   _MyConsultationsState createState() => _MyConsultationsState();

@@ -12,8 +12,10 @@ String tajawalBold = 'Tajawal-Bold';
 
 String avatarUserMale = "assets/imgs/userMale.svg";
 String avatarUserFemale = "assets/imgs/userFemale.svg";
-String avatarDrMale = "assets/imgs/avatarMale.svg";
-String avatarDrFemale = "assets/imgs/avatarFemale.svg";
+String doctorMale = "assets/imgs/avatarMale.svg";
+String doctorFemale = "assets/imgs/avatarFemale.svg";
+String patientFemale = 'assets/imgs/patient-female.svg';
+String patientMale = 'assets/imgs/patient-male.svg';
 String logo = 'assets/imgs/logo.svg';
 String logo2 = 'assets/imgs/logo2.svg';
 String alamal = 'assets/imgs/al-amal.svg';
@@ -21,6 +23,10 @@ String visaPay = 'assets/imgs/visa.svg';
 String stcPay = 'assets/imgs/stc-pay.svg';
 String applePay = 'assets/imgs/apple-pay.svg';
 String drIcon = 'assets/imgs/dr-icon.svg';
+String drSearch = 'assets/imgs/doctor-search.svg';
+String patientIcon = 'assets/imgs/patient-icon.svg';
+String voiceCall = 'assets/imgs/voice_call.svg';
+String consultationOutlined = 'assets/imgs/consultation_outlined.svg';
 String lottieLogo = 'assets/lottie/logo.json';
 String logoSound = 'assets/sound/logo-sound.mp3';
 

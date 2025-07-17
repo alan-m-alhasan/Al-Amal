@@ -216,10 +216,9 @@ class _VerifiedEmailState extends State<VerifiedEmail> {
                                   TextButton(
                                     style: ButtonStyle(
                                       alignment: Alignment.center,
-                                      foregroundColor:
-                                          MaterialStateProperty.all(
-                                            Colors.green,
-                                          ),
+                                      foregroundColor: WidgetStateProperty.all(
+                                        Colors.green,
+                                      ),
                                       splashFactory: NoSplash.splashFactory,
                                     ),
                                     onPressed: () {},

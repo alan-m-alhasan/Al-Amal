@@ -352,7 +352,7 @@ Ensuring the rights of persons with disabilities is an essential part of achievi
 
 2. Right to work: Persons with disabilities must have the right to access jobs that are appropriate to individual abilities, without discrimination. This includes providing accessible work environments, modifying working hours, or providing additional support as needed.
 
-3. Right to health care: This is the right to access appropriate medical services that meet the needs of persons with disabilities. Health care should include physical therapy, psychological and specialized medical services, as well as the provision of medications and long-term treatment.
+3. Right to health care: This is the right to access appropriate medical services that meet the needs of persons with disabilities. Health care should include physical therapy, psychological and specialized medical services, as well as the provision of medicines and long-term treatment.
 
 4. Right to access public spaces: Public spaces, such as parks and commercial buildings, must ensure that they are Accessible to people with special needs, by providing reasonable access, elevators, and special facilities.
 

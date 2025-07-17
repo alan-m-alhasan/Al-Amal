@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class DoctorAppointments extends StatefulWidget {
-  const DoctorAppointments({Key? key}) : super(key: key);
+  const DoctorAppointments({super.key});
 
   @override
   _DoctorAppointmentsState createState() => _DoctorAppointmentsState();

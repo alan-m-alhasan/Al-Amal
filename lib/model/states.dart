@@ -133,3 +133,9 @@ class ProfileErrorState extends ProfileStates {
 
   ProfileErrorState(this.error);
 }
+
+class DrawerStates {}
+
+class OpenDrawerState extends DrawerStates {}
+
+class CloseDrawerState extends DrawerStates {}

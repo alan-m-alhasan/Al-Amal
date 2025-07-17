@@ -104,11 +104,7 @@ class UsersAuth {
     // GoogleSignInApi.login();
     if (res == true) {
       if (mounted) {
-        pushAndRmvUntil(
-          context: context,
-          page:
-              accountType == 'doctor' ? const DoctorHome() : const MainScreen(),
-        );
+        pushAndRmvUntil(context: context, page: const MainScreen());
         CustomSnackBar(context: context, translateKey: 'enterSuccess');
         CacheHelper.saveData(
           key: 'accountType',

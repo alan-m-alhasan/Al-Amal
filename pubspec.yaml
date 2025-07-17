@@ -28,12 +28,15 @@ dependencies:
   flutter_zoom_drawer: ^3.0.0
   image_picker:
   lottie:
-  just_audio: ^0.9.37
+  just_audio:
   flutter_switch:
   google_sign_in:
   flutter_facebook_auth:
   hugeicons:
+  fl_chart: ^1.0.0
 
+  path: any
+  intl: any
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -24,13 +24,13 @@ class DoctorScreen extends StatefulWidget {
   final String gender;
 
   const DoctorScreen({
-    Key? key,
+    super.key,
     required this.name,
     required this.specialty,
     required this.phone,
     required this.location,
     required this.gender,
-  }) : super(key: key);
+  });
 
   @override
   State<DoctorScreen> createState() => _DoctorScreenState();
@@ -82,10 +82,8 @@ class _DoctorScreenState extends State<DoctorScreen> {
                                       maxRadius: 25.0,
                                       child:
                                           widget.gender == 'male'
-                                              ? SvgPicture.asset(avatarDrMale)
-                                              : SvgPicture.asset(
-                                                avatarDrFemale,
-                                              ),
+                                              ? SvgPicture.asset(doctorMale)
+                                              : SvgPicture.asset(doctorFemale),
                                     ),
                                   ),
                                   const SizedBox(width: 16.0),

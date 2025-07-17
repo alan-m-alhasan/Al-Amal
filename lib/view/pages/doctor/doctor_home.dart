@@ -13,7 +13,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class DoctorHome extends StatefulWidget {
-  const DoctorHome({Key? key}) : super(key: key);
+  const DoctorHome({super.key});
 
   @override
   _DoctorHomeState createState() => _DoctorHomeState();
@@ -39,7 +39,7 @@ class _DoctorHomeState extends State<DoctorHome> {
                   const SizedBox(width: 24.0),
                 ],
                 leading: IconButton(
-                  onPressed: () {
+                  onPressed: () async {
                     context.read<DrawerCubit>().toggleDrawer();
                   },
                   icon: const Icon(AmalIcons.menu, color: Colors.white),
@@ -82,8 +82,10 @@ class _DoctorHomeState extends State<DoctorHome> {
                   overscroll.disallowIndicator();
                   return true;
                 },
-                child: const TabBarView(
-                  children: [DoctorConsultations(), DoctorAppointments()],
+                child: TabBarTheme(
+                  child: const TabBarView(
+                    children: [DoctorConsultations(), DoctorAppointments()],
+                  ),
                 ),
               ),
             ),

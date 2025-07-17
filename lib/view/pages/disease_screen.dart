@@ -3,28 +3,32 @@
 import 'package:alamal/controller/constant.dart';
 import 'package:alamal/localization/localization.dart';
 import 'package:alamal/model/cacheHelper.dart';
+import 'package:alamal/model/diseases_stats.dart';
 import 'package:alamal/model/dr_disease.dart';
 import 'package:alamal/model/lang_bloc.dart';
 import 'package:alamal/model/theme_bloc.dart';
 import 'package:alamal/view/pages/doctor_choose.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hugeicons/hugeicons.dart';
 
 class DiseaseScreen extends StatefulWidget {
   final List<Doctor> doctors;
   final String diseaseName;
   final List<String> symptoms;
-  final List<String> pharmaceutical;
+  final List<String> medicines;
   final String description;
+  final DiseaseStates? diseaseStats;
 
   const DiseaseScreen({
     super.key,
     required this.doctors,
     required this.diseaseName,
     required this.symptoms,
-    required this.pharmaceutical,
+    required this.medicines,
     required this.description,
+    required this.diseaseStats,
   });
 
   @override
@@ -34,12 +38,7 @@ class DiseaseScreen extends StatefulWidget {
 class _DiseaseScreenState extends State<DiseaseScreen> {
   var scaffoldKey = GlobalKey<ScaffoldState>();
 
-  // List<DrAccounts>? drAccounts;
   bool isLoading = true;
-
-  // bool isEmpty = false;
-
-  // bool isLongPressed = false;
 
   @override
   void initState() {
@@ -100,148 +99,6 @@ class _DiseaseScreenState extends State<DiseaseScreen> {
                               child: Flex(
                                 direction: Axis.vertical,
                                 children: [
-                                  //
-                                  // Disease Description
-                                  //
-                                  Align(
-                                    alignment: AlignmentDirectional.centerStart,
-                                    child: Text(
-                                      "${AppLocalization.of(context)!.getTranslatedValue('description')}",
-                                      style: TextStyle(
-                                        fontSize: 22.0,
-                                        fontFamily:
-                                            CacheHelper.getData(
-                                                      key: 'languageCode',
-                                                    ) ==
-                                                    'en'
-                                                ? poppinsMedium
-                                                : tajawalMedium,
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(height: 14.0),
-                                  Text(
-                                    widget.description,
-                                    style: TextStyle(
-                                      fontSize:
-                                          CacheHelper.getData(
-                                                    key: 'languageCode',
-                                                  ) ==
-                                                  'en'
-                                              ? 16.0
-                                              : 18.0,
-                                      fontFamily:
-                                          CacheHelper.getData(
-                                                    key: 'languageCode',
-                                                  ) ==
-                                                  'en'
-                                              ? poppinsMedium
-                                              : tajawalMedium,
-                                    ),
-                                  ),
-                                  SizedBox(height: 30.0),
-                                  //
-                                  // Disease Symptoms
-                                  //
-                                  Align(
-                                    alignment: AlignmentDirectional.centerStart,
-                                    child: Text(
-                                      "${AppLocalization.of(context)!.getTranslatedValue('symptoms')}",
-                                      style: TextStyle(
-                                        fontSize: 22.0,
-                                        fontFamily:
-                                            CacheHelper.getData(
-                                                      key: 'languageCode',
-                                                    ) ==
-                                                    'en'
-                                                ? poppinsMedium
-                                                : tajawalMedium,
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(height: 14.0),
-                                  ListView.separated(
-                                    shrinkWrap: true,
-                                    physics:
-                                        const NeverScrollableScrollPhysics(),
-                                    padding: EdgeInsets.zero,
-                                    itemCount: widget.symptoms.length,
-                                    separatorBuilder:
-                                        (context, index) =>
-                                            SizedBox(height: 10.0),
-                                    itemBuilder:
-                                        (context, index) => Text(
-                                          '${index + 1}. ${widget.symptoms[index]}',
-                                          style: TextStyle(
-                                            fontSize:
-                                                CacheHelper.getData(
-                                                          key: 'languageCode',
-                                                        ) ==
-                                                        'en'
-                                                    ? 16.0
-                                                    : 18.0,
-                                            fontFamily:
-                                                CacheHelper.getData(
-                                                          key: 'languageCode',
-                                                        ) ==
-                                                        'en'
-                                                    ? poppinsMedium
-                                                    : tajawalMedium,
-                                          ),
-                                        ),
-                                  ),
-                                  SizedBox(height: 30.0),
-                                  //
-                                  // Disease Appropriate Medications
-                                  //
-                                  Align(
-                                    alignment: AlignmentDirectional.centerStart,
-                                    child: Text(
-                                      "${AppLocalization.of(context)!.getTranslatedValue('pharmaceutical')}",
-                                      style: TextStyle(
-                                        fontSize: 22.0,
-                                        fontFamily:
-                                            CacheHelper.getData(
-                                                      key: 'languageCode',
-                                                    ) ==
-                                                    'en'
-                                                ? poppinsMedium
-                                                : tajawalMedium,
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(height: 14.0),
-                                  ListView.separated(
-                                    shrinkWrap: true,
-                                    physics:
-                                        const NeverScrollableScrollPhysics(),
-                                    padding: EdgeInsets.zero,
-                                    itemCount: widget.pharmaceutical.length,
-                                    separatorBuilder:
-                                        (context, index) =>
-                                            SizedBox(height: 10.0),
-                                    itemBuilder:
-                                        (context, index) => Text(
-                                          '${index + 1}. ${widget.pharmaceutical[index]}',
-                                          style: TextStyle(
-                                            fontSize:
-                                                CacheHelper.getData(
-                                                          key: 'languageCode',
-                                                        ) ==
-                                                        'en'
-                                                    ? 16.0
-                                                    : 18.0,
-                                            fontFamily:
-                                                CacheHelper.getData(
-                                                          key: 'languageCode',
-                                                        ) ==
-                                                        'en'
-                                                    ? poppinsMedium
-                                                    : tajawalMedium,
-                                          ),
-                                        ),
-                                  ),
-                                  SizedBox(height: 30.0),
                                   //
                                   // Disease Doctors
                                   //
@@ -320,6 +177,319 @@ class _DiseaseScreenState extends State<DiseaseScreen> {
                                       ],
                                     ),
                                   ),
+                                  SizedBox(height: 30.0),
+                                  //
+                                  // Disease Description
+                                  //
+                                  Row(
+                                    children: [
+                                      SvgPicture.asset(
+                                        logo2,
+                                        color: state.color,
+                                        width: 30.0,
+                                      ),
+                                      const SizedBox(width: 10.0),
+                                      Align(
+                                        alignment:
+                                            AlignmentDirectional.centerStart,
+                                        child: Text(
+                                          "${AppLocalization.of(context)!.getTranslatedValue('aboutDisease')}",
+                                          style: TextStyle(
+                                            fontSize:
+                                                CacheHelper.getData(
+                                                          key: 'languageCode',
+                                                        ) ==
+                                                        'en'
+                                                    ? 22.0
+                                                    : 24.0,
+                                            color: state.color,
+                                            fontFamily:
+                                                CacheHelper.getData(
+                                                          key: 'languageCode',
+                                                        ) ==
+                                                        'en'
+                                                    ? poppinsMedium
+                                                    : tajawalMedium,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height: 14.0),
+                                  Text(
+                                    widget.description,
+                                    style: TextStyle(
+                                      fontSize:
+                                          CacheHelper.getData(
+                                                    key: 'languageCode',
+                                                  ) ==
+                                                  'en'
+                                              ? 16.0
+                                              : 18.0,
+                                      fontFamily:
+                                          CacheHelper.getData(
+                                                    key: 'languageCode',
+                                                  ) ==
+                                                  'en'
+                                              ? poppinsMedium
+                                              : tajawalMedium,
+                                    ),
+                                  ),
+                                  SizedBox(height: 30.0),
+                                  //
+                                  // Disease Symptoms
+                                  //
+                                  Row(
+                                    children: [
+                                      SvgPicture.asset(
+                                        logo2,
+                                        color: state.color,
+                                        width: 30.0,
+                                      ),
+                                      const SizedBox(width: 10.0),
+                                      Align(
+                                        alignment:
+                                            AlignmentDirectional.centerStart,
+                                        child: Text(
+                                          "${AppLocalization.of(context)!.getTranslatedValue('symptoms')}",
+                                          style: TextStyle(
+                                            color: state.color,
+                                            fontSize:
+                                                CacheHelper.getData(
+                                                          key: 'languageCode',
+                                                        ) ==
+                                                        'en'
+                                                    ? 22.0
+                                                    : 24.0,
+                                            fontFamily:
+                                                CacheHelper.getData(
+                                                          key: 'languageCode',
+                                                        ) ==
+                                                        'en'
+                                                    ? poppinsMedium
+                                                    : tajawalMedium,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height: 14.0),
+                                  ListView.separated(
+                                    shrinkWrap: true,
+                                    physics:
+                                        const NeverScrollableScrollPhysics(),
+                                    padding: EdgeInsets.zero,
+                                    itemCount: widget.symptoms.length,
+                                    separatorBuilder:
+                                        (context, index) =>
+                                            SizedBox(height: 10.0),
+                                    itemBuilder:
+                                        (context, index) => Text(
+                                          '${index + 1}. ${widget.symptoms[index]}',
+                                          style: TextStyle(
+                                            fontSize:
+                                                CacheHelper.getData(
+                                                          key: 'languageCode',
+                                                        ) ==
+                                                        'en'
+                                                    ? 16.0
+                                                    : 18.0,
+                                            fontFamily:
+                                                CacheHelper.getData(
+                                                          key: 'languageCode',
+                                                        ) ==
+                                                        'en'
+                                                    ? poppinsMedium
+                                                    : tajawalMedium,
+                                          ),
+                                        ),
+                                  ),
+                                  SizedBox(height: 30.0),
+                                  //
+                                  // Disease Appropriate Medicines
+                                  //
+                                  Row(
+                                    children: [
+                                      SvgPicture.asset(
+                                        logo2,
+                                        color: state.color,
+                                        width: 30.0,
+                                      ),
+                                      const SizedBox(width: 10.0),
+                                      Align(
+                                        alignment:
+                                            AlignmentDirectional.centerStart,
+                                        child: Text(
+                                          "${AppLocalization.of(context)!.getTranslatedValue('appropriateMedicines')}",
+                                          style: TextStyle(
+                                            color: state.color,
+                                            fontSize:
+                                                CacheHelper.getData(
+                                                          key: 'languageCode',
+                                                        ) ==
+                                                        'en'
+                                                    ? 22.0
+                                                    : 24.0,
+                                            fontFamily:
+                                                CacheHelper.getData(
+                                                          key: 'languageCode',
+                                                        ) ==
+                                                        'en'
+                                                    ? poppinsMedium
+                                                    : tajawalMedium,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height: 14.0),
+                                  ListView.separated(
+                                    shrinkWrap: true,
+                                    physics:
+                                        const NeverScrollableScrollPhysics(),
+                                    padding: EdgeInsets.zero,
+                                    itemCount: widget.medicines.length,
+                                    separatorBuilder:
+                                        (context, index) =>
+                                            SizedBox(height: 10.0),
+                                    itemBuilder:
+                                        (context, index) => Text(
+                                          '${index + 1}. ${widget.medicines[index]}',
+                                          style: TextStyle(
+                                            fontSize:
+                                                CacheHelper.getData(
+                                                          key: 'languageCode',
+                                                        ) ==
+                                                        'en'
+                                                    ? 16.0
+                                                    : 18.0,
+                                            fontFamily:
+                                                CacheHelper.getData(
+                                                          key: 'languageCode',
+                                                        ) ==
+                                                        'en'
+                                                    ? poppinsMedium
+                                                    : tajawalMedium,
+                                          ),
+                                        ),
+                                  ),
+                                  SizedBox(height: 30.0),
+                                  //
+                                  // Disease Statistics
+                                  //
+                                  Row(
+                                    children: [
+                                      SvgPicture.asset(
+                                        logo2,
+                                        color: state.color,
+                                        width: 30.0,
+                                      ),
+                                      const SizedBox(width: 10.0),
+                                      Align(
+                                        alignment:
+                                            AlignmentDirectional.centerStart,
+                                        child: Text(
+                                          "${AppLocalization.of(context)!.getTranslatedValue('diseaseStats')}",
+                                          style: TextStyle(
+                                            color: state.color,
+                                            fontSize:
+                                                CacheHelper.getData(
+                                                          key: 'languageCode',
+                                                        ) ==
+                                                        'en'
+                                                    ? 22.0
+                                                    : 24.0,
+                                            fontFamily:
+                                                CacheHelper.getData(
+                                                          key: 'languageCode',
+                                                        ) ==
+                                                        'en'
+                                                    ? poppinsMedium
+                                                    : tajawalMedium,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height: 14.0),
+                                  Table(
+                                    columnWidths: const {
+                                      0: IntrinsicColumnWidth(),
+                                      1: IntrinsicColumnWidth(),
+                                      2: FlexColumnWidth(),
+                                    },
+                                    defaultVerticalAlignment:
+                                        TableCellVerticalAlignment.top,
+                                    children: _buildTableRowsWithDividers(state.color, [
+                                      {
+                                        'label':
+                                            "${AppLocalization.of(context)!.getTranslatedValue('prevalence')}",
+                                        'value':
+                                            widget.diseaseStats!.prevalence,
+                                      },
+                                      {
+                                        'label':
+                                            "${AppLocalization.of(context)!.getTranslatedValue('regions')}",
+                                        'value': widget.diseaseStats!.regions,
+                                      },
+                                      {
+                                        'label':
+                                            "${AppLocalization.of(context)!.getTranslatedValue('causes')}",
+                                        'value': widget.diseaseStats!.causes,
+                                      },
+                                      {
+                                        'label':
+                                            "${AppLocalization.of(context)!.getTranslatedValue('transmission')}",
+                                        'value':
+                                            widget.diseaseStats!.transmission,
+                                      },
+                                    ]),
+                                  ),
+                                  SizedBox(height: 16.0),
+                                  // SizedBox(height: 20),
+                                  // Text(
+                                  //   "نسبة انتشار الأمراض (%)",
+                                  //   style: TextStyle(
+                                  //     fontSize: 18,
+                                  //     fontWeight: FontWeight.bold,
+                                  //   ),
+                                  // ),
+                                  // Container(
+                                  //   height: 300,
+                                  //   child: DiseaseBarChart(
+                                  //     ChartType.prevalencePercent,
+                                  //   ),
+                                  // ),
+                                  //
+                                  // SizedBox(height: 20),
+                                  // Text(
+                                  //   "الإصابات السنوية الجديدة",
+                                  //   style: TextStyle(
+                                  //     fontSize: 18,
+                                  //     fontWeight: FontWeight.bold,
+                                  //   ),
+                                  // ),
+                                  // Container(
+                                  //   height: 300,
+                                  //   child: DiseaseBarChart(
+                                  //     ChartType.annualIncidence,
+                                  //   ),
+                                  // ),
+                                  //
+                                  // SizedBox(height: 20),
+                                  // Text(
+                                  //   "عدد الأشخاص المصابين",
+                                  //   style: TextStyle(
+                                  //     fontSize: 18,
+                                  //     fontWeight: FontWeight.bold,
+                                  //   ),
+                                  // ),
+                                  // Container(
+                                  //   height: 300,
+                                  //   child: DiseaseBarChart(
+                                  //     ChartType.affectedPopulation,
+                                  //   ),
+                                  // ),
                                 ],
                               ),
                             ),
@@ -331,5 +501,57 @@ class _DiseaseScreenState extends State<DiseaseScreen> {
         );
       },
     );
+  }
+
+  List<TableRow> _buildTableRowsWithDividers(
+    Color dividerColor,
+    List<Map<String, String>> items,
+  ) {
+    final isEnglish = CacheHelper.getData(key: 'languageCode') == 'en';
+    final fontSize = isEnglish ? 16.0 : 18.0;
+    final fontFamily = isEnglish ? poppinsMedium : tajawalMedium;
+
+    List<TableRow> rows = [];
+
+    for (int i = 0; i < items.length; i++) {
+      final label = items[i]['label']!;
+      final value = items[i]['value']!;
+
+      rows.add(
+        TableRow(
+          children: [
+            Text(
+              label,
+              style: TextStyle(fontSize: fontSize, fontFamily: fontFamily),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12.0),
+              child: Text(
+                ":",
+                style: TextStyle(fontSize: fontSize, fontFamily: fontFamily),
+              ),
+            ),
+            Text(
+              value,
+              style: TextStyle(fontSize: fontSize, fontFamily: fontFamily),
+            ),
+          ],
+        ),
+      );
+
+      // Divider row (except after last item)
+      if (i != items.length - 1) {
+        rows.add(
+          TableRow(
+            children: [
+              for (int i = 0; i < 3; i++)
+                Divider(color: dividerColor.withOpacity(.3), height: 26.0),
+            ],
+          ),
+        );
+      }
+    }
+
+    return rows;
   }
 }

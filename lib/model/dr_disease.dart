@@ -19,14 +19,14 @@ class Disease {
   final String name;
   final List<Doctor> doctors;
   final List<String> symptoms;
-  final List<String> pharmaceutical;
+  final List<String> appropriateMedicines;
   final String description;
 
   Disease({
     required this.name,
     required this.doctors,
     required this.symptoms,
-    required this.pharmaceutical,
+    required this.appropriateMedicines,
     required this.description,
   });
 }
@@ -75,7 +75,7 @@ final Map<String, List<Disease>> medicalDataArabic = {
         "تأخر في المهارات الحركية",
         "صعوبات في المشي أو الحركة",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "باكلوفين (للتشنجات العضلية)",
         "ديازيبام (للتقلصات العضلية)",
         "تيزانيدين (مرخي عضلي)",
@@ -125,7 +125,7 @@ final Map<String, List<Disease>> medicalDataArabic = {
         "إرهاق شديد",
         "دوار ومشاكل في التوازن",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "إنترفيرون بيتا-1أ (أفونكس، ربيف)",
         "جلاتيرامير أسيتات (كوباكسون)",
         "فينغوليمود (جيلينيا)",
@@ -175,7 +175,7 @@ final Map<String, List<Disease>> medicalDataArabic = {
         "ألم شديد أو وخز في المنطقة المصابة",
         "صعوبات في التنفس",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "مرخيات العضلات مثل باكلوفين",
         "مسكنات الألم مثل غابابنتين",
         "الكورتيكوستيرويدات لعلاج الالتهاب",
@@ -225,7 +225,7 @@ final Map<String, List<Disease>> medicalDataArabic = {
         "مشاكل في التوازن والوقوف",
         "تغيرات في الكلام والكتابة",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "ليفودوبا/كاربيدوبا (سينيميت)",
         "براميبيكسول (ميرابيكس)",
         "روبينيرول (ريكويب)",
@@ -275,7 +275,7 @@ final Map<String, List<Disease>> medicalDataArabic = {
         "دوخة مفاجئة أو فقدان التوازن",
         "صداع شديد مفاجئ بدون سبب معروف",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "منشط بلاسمينوجين النسيجي (tPA) لعلاج الجلطة الحادة)",
         "الأسبرين للوقاية من الجلطات",
         "كلوبيدوجريل (بلافيكس)",
@@ -313,7 +313,7 @@ final Map<String, List<Disease>> medicalDataArabic = {
         "تأخر في النمو والتطور",
         "درجات متفاوتة من الإعاقة الذهنية",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "فيتامينات ومكملات غذائية حسب الحاجة",
         "هرمونات الغدة الدرقية إذا لزم الأمر",
         "أدوية لعلاج مشاكل القلب إذا كانت موجودة",
@@ -349,7 +349,7 @@ final Map<String, List<Disease>> medicalDataArabic = {
         "براز دهني كريه الرائحة",
         "عقم عند الذكور",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "إنزيمات البنكرياس (كريون، بانكريليباز)",
         "موسعات الشعب الهوائية",
         "مضادات حيوية للعدوى الرئوية",
@@ -385,7 +385,7 @@ final Map<String, List<Disease>> medicalDataArabic = {
         "تأخر في المهارات الحركية",
         "مشاكل في التنفس والبلع في المراحل المتقدمة",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "الكورتيكوستيرويدات (بريدنيزون، ديفلازاكورت)",
         "إيتيبليرسن (لضمور العضلات الشوكي)",
         "نوسينيرسن (سبينرازا)",
@@ -423,7 +423,7 @@ final Map<String, List<Disease>> medicalDataArabic = {
         "طنين في الأذن",
         "صعوبة في سماع الأصوات عالية التردد",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "المضادات الحيوية لالتهابات الأذن إذا كانت السبب",
         "الكورتيكوستيرويدات لالتهابات الأذن الداخلية",
         "أدوية لتحسين الدورة الدموية للأذن الداخلية",
@@ -459,7 +459,7 @@ final Map<String, List<Disease>> medicalDataArabic = {
         "فقدان الرؤية المحيطية",
         "الحاجة إلى تقريب الأشياء للرؤية بوضوح",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "قطرات العين لعلاج الجلوكوما",
         "مكملات الفيتامينات لبعض أنواع الضمور البقعي",
         "أدوية لعلاج التهاب العين إذا كان السبب",
@@ -495,7 +495,7 @@ final Map<String, List<Disease>> medicalDataArabic = {
         "صعوبة في فهم الكلام",
         "مشاكل في تنظيم الأفكار للتعبير عنها",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "أدوية لعلاج الأسباب الكامنة مثل ADHD إذا كانت موجودة",
         "مضادات الاكتئاب لبعض حالات القلق المرتبط بالكلام",
         "أدوية لتحسين الوظيفة العصبية إذا لزم الأمر",
@@ -533,7 +533,7 @@ final Map<String, List<Disease>> medicalDataArabic = {
         "صعوبة في فهم المشاعر",
         "حساسية مفرطة للمؤثرات الحسية",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "ريسبيريدون (ريسبردال) للسلوك العدواني",
         "أريبيبرازول (أبيليفاي) للتهيج",
         "ميلتونين لاضطرابات النوم",
@@ -569,7 +569,7 @@ final Map<String, List<Disease>> medicalDataArabic = {
         "صعوبة في اتباع التعليمات",
         "نسيان متكرر للأشياء اليومية",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "ميثيلفينيديت (ريتالين، كونسيرتا)",
         "ديكستروأمفيتامين (أديرال)",
         "أتوموكسيتين (ستراتيرا)",
@@ -605,7 +605,7 @@ final Map<String, List<Disease>> medicalDataArabic = {
         "إرهاق مستمر",
         "أفكار سلبية أو انتحارية",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "فلوكستين (بروزاك)",
         "سيرترالين (زولوفت)",
         "إسيتالوبرام (ليكسابرو)",
@@ -641,7 +641,7 @@ final Map<String, List<Disease>> medicalDataArabic = {
         "انخفاض في التعبير العاطفي",
         "انسحاب اجتماعي",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "ريسبيريدون (ريسبردال)",
         "أولانزابين (زيبريكسا)",
         "كويتيابين (سيروكويل)",
@@ -679,7 +679,7 @@ final Map<String, List<Disease>> medicalDataArabic = {
         "فقدان الوزن غير المبرر",
         "تعب وإرهاق",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "أنسولين (للسكري النوع الأول)",
         "ميتفورمين (جلوكوفاج)",
         "غليبوريد (دايونيل)",
@@ -714,7 +714,7 @@ final Map<String, List<Disease>> medicalDataArabic = {
         "ألم في الصدر",
         "ضيق في التنفس",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "أملوديبين (نورفاسك)",
         "لوسارتان (كوزار)",
         "أتينولول (تينورمين)",
@@ -752,7 +752,7 @@ final Map<String, List<Disease>> medicalDataArabic = {
         "بطء في تعلم المهارات الجديدة",
         "صعوبة في اتباع التعليمات",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "منشطات للذاكرة والتركيز إذا لزم الأمر",
         "أوميغا 3 كمكمل غذائي",
         "فيتامينات ب المركبة",
@@ -788,7 +788,7 @@ final Map<String, List<Disease>> medicalDataArabic = {
         "صعوبة في انتظار الدور",
         "ميل إلى مقاطعة الآخرين",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "ميثيلفينيديت (ريتالين، كونسيرتا)",
         "ديكستروأمفيتامين (أديرال)",
         "أتوموكسيتين (ستراتيرا)",
@@ -824,7 +824,7 @@ final Map<String, List<Disease>> medicalDataArabic = {
         "مشاكل في تنظيم الأفكار للتعبير عنها",
         "تأخر في تطوير اللغة",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "أدوية لعلاج الأسباب الكامنة إذا وجدت",
         "مكملات غذائية لتحسين الوظيفة العصبية",
         "أدوية لتحسين التنسيق الحركي إذا لزم الأمر",
@@ -860,7 +860,7 @@ final Map<String, List<Disease>> medicalDataArabic = {
         "مشاكل في الذاكرة",
         "صعوبة في حل المشكلات البسيطة",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "هرمون النمو في بعض الحالات",
         "فيتامينات ومكملات غذائية حسب الحاجة",
         "أدوية لتحسين الوظيفة العصبية",
@@ -914,12 +914,12 @@ final Map<String, List<Disease>> medicalDataEnglish = {
         "Delayed motor skills",
         "Difficulty walking or moving",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "Baclofen (for muscle spasticity)",
         "Diazepam (for muscle contractions)",
         "Tizanidine (muscle relaxant)",
         "Botox (for localized spasticity)",
-        "Pain medications if needed",
+        "Pain medicines if needed",
       ],
     ),
     Disease(
@@ -963,7 +963,7 @@ final Map<String, List<Disease>> medicalDataEnglish = {
         "Severe fatigue",
         "Dizziness and balance problems",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "Interferon beta-1a (Avonex, Rebif)",
         "Glatiramer acetate (Copaxone)",
         "Fingolimod (Gilenya)",
@@ -1012,18 +1012,18 @@ final Map<String, List<Disease>> medicalDataEnglish = {
         "Severe pain or tingling in affected area",
         "Breathing difficulties",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "Muscle relaxants like Baclofen",
         "Pain relievers like Gabapentin",
         "Corticosteroids to reduce inflammation",
         "Antidepressants for neuropathic pain",
-        "Medications to improve bladder function",
+        "Medicines to improve bladder function",
       ],
     ),
     Disease(
       name: "Parkinson's Disease",
       description:
-          "A progressive neurodegenerative disorder affecting dopamine-producing cells in the brain. Characterized by slow movement, resting tremors, muscle rigidity, and balance problems. Symptoms typically appear after age 60 and develop slowly over years. May be accompanied by depression, sleep disorders, and memory problems. Treatment includes dopamine-replacement medications and physical therapy to improve movement and flexibility.",
+          "A progressive neurodegenerative disorder affecting dopamine-producing cells in the brain. Characterized by slow movement, resting tremors, muscle rigidity, and balance problems. Symptoms typically appear after age 60 and develop slowly over years. May be accompanied by depression, sleep disorders, and memory problems. Treatment includes dopamine-replacement medicines and physical therapy to improve movement and flexibility.",
       doctors: [
         Doctor(
           name: "Dr. Samer Mansour",
@@ -1061,7 +1061,7 @@ final Map<String, List<Disease>> medicalDataEnglish = {
         "Balance and posture problems",
         "Speech and writing changes",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "Levodopa/Carbidopa (Sinemet)",
         "Pramipexole (Mirapex)",
         "Ropinirole (Requip)",
@@ -1110,12 +1110,12 @@ final Map<String, List<Disease>> medicalDataEnglish = {
         "Sudden dizziness or loss of balance",
         "Sudden severe headache with no known cause",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "Tissue plasminogen activator (tPA) for acute stroke",
         "Aspirin for stroke prevention",
         "Clopidogrel (Plavix)",
         "Warfarin (Coumadin) as blood thinner",
-        "Blood pressure medications if needed",
+        "Blood pressure medicines if needed",
       ],
     ),
   ],
@@ -1147,11 +1147,11 @@ final Map<String, List<Disease>> medicalDataEnglish = {
         "Delayed growth and development",
         "Varying degrees of intellectual disability",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "Vitamins and nutritional supplements as needed",
         "Thyroid hormones if required",
-        "Medications for heart problems if present",
-        "Growth improvement medications if needed",
+        "Medicines for heart problems if present",
+        "Growth improvement medicines if needed",
         "Enzyme supplements to improve digestion",
       ],
     ),
@@ -1182,7 +1182,7 @@ final Map<String, List<Disease>> medicalDataEnglish = {
         "Greasy, foul-smelling stools",
         "Male infertility",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "Pancreatic enzymes (Creon, Pancrelipase)",
         "Bronchodilators",
         "Antibiotics for lung infections",
@@ -1217,11 +1217,11 @@ final Map<String, List<Disease>> medicalDataEnglish = {
         "Delayed motor skills",
         "Breathing and swallowing problems in advanced stages",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "Corticosteroids (Prednisone, Deflazacort)",
         "Eteplirsen (for Duchenne muscular dystrophy)",
         "Nusinersen (Spinraza)",
-        "Medications to improve heart function if needed",
+        "Medicines to improve heart function if needed",
         "Pain relievers as required",
       ],
     ),
@@ -1254,12 +1254,12 @@ final Map<String, List<Disease>> medicalDataEnglish = {
         "Tinnitus (ringing in the ears)",
         "Trouble hearing high-pitched sounds",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "Antibiotics for ear infections if present",
         "Corticosteroids for inner ear inflammation",
-        "Medications to improve inner ear circulation",
+        "Medicines to improve inner ear circulation",
         "Antihistamines for allergy-related cases",
-        "Medications for tinnitus if needed",
+        "Medicines for tinnitus if needed",
       ],
     ),
     Disease(
@@ -1289,11 +1289,11 @@ final Map<String, List<Disease>> medicalDataEnglish = {
         "Loss of peripheral vision",
         "Needing to hold objects close to see",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "Eye drops for glaucoma",
         "Vitamin supplements for some types of macular degeneration",
-        "Medications to treat eye inflammation if present",
-        "Medications to improve eye circulation",
+        "Medicines to treat eye inflammation if present",
+        "Medicines to improve eye circulation",
         "Corticosteroids for certain eye inflammations",
       ],
     ),
@@ -1324,10 +1324,10 @@ final Map<String, List<Disease>> medicalDataEnglish = {
         "Trouble understanding speech",
         "Problems organizing thoughts for expression",
       ],
-      pharmaceutical: [
-        "Medications for underlying conditions like ADHD if present",
+      appropriateMedicines: [
+        "Medicines for underlying conditions like ADHD if present",
         "Antidepressants for some anxiety-related speech issues",
-        "Medications to improve neurological function if needed",
+        "Medicines to improve neurological function if needed",
         "Memory and focus enhancers in some cases",
         "Nutritional supplements to support neurological function",
       ],
@@ -1361,18 +1361,18 @@ final Map<String, List<Disease>> medicalDataEnglish = {
         "Trouble understanding emotions",
         "Over-sensitivity to sensory stimuli",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "Risperidone (Risperdal) for aggressive behavior",
         "Aripiprazole (Abilify) for irritability",
         "Melatonin for sleep disorders",
         "SSRIs for anxiety",
-        "Medications to improve focus if needed",
+        "Medicines to improve focus if needed",
       ],
     ),
     Disease(
       name: "ADHD (Attention Deficit Hyperactivity Disorder)",
       description:
-          "A neurodevelopmental condition appearing in childhood and often continuing into adulthood. Includes three types: predominantly inattentive, hyperactive-impulsive, or combined. Affects attention control, impulsivity, and activity regulation. May lead to academic difficulties and social relationship problems. Treatment involves stimulant medications, behavioral therapy, and educational modifications.",
+          "A neurodevelopmental condition appearing in childhood and often continuing into adulthood. Includes three types: predominantly inattentive, hyperactive-impulsive, or combined. Affects attention control, impulsivity, and activity regulation. May lead to academic difficulties and social relationship problems. Treatment involves stimulant medicines, behavioral therapy, and educational modifications.",
       doctors: [
         Doctor(
           name: "Dr. Khaled Ahmad",
@@ -1396,7 +1396,7 @@ final Map<String, List<Disease>> medicalDataEnglish = {
         "Trouble following instructions",
         "Frequent forgetfulness",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "Methylphenidate (Ritalin, Concerta)",
         "Dextroamphetamine (Adderall)",
         "Atomoxetine (Strattera)",
@@ -1431,7 +1431,7 @@ final Map<String, List<Disease>> medicalDataEnglish = {
         "Constant fatigue",
         "Negative or suicidal thoughts",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "Fluoxetine (Prozac)",
         "Sertraline (Zoloft)",
         "Escitalopram (Lexapro)",
@@ -1442,7 +1442,7 @@ final Map<String, List<Disease>> medicalDataEnglish = {
     Disease(
       name: "Schizophrenia",
       description:
-          "A severe mental disorder affecting thinking, emotions, and behavior. Characterized by positive symptoms (hallucinations/delusions) and negative symptoms (social withdrawal). Typically appears in late adolescence or early adulthood. Requires long-term treatment with antipsychotic medications and psychotherapy. Rehabilitation includes social skills training and vocational support to prevent relapse.",
+          "A severe mental disorder affecting thinking, emotions, and behavior. Characterized by positive symptoms (hallucinations/delusions) and negative symptoms (social withdrawal). Typically appears in late adolescence or early adulthood. Requires long-term treatment with antipsychotic medicines and psychotherapy. Rehabilitation includes social skills training and vocational support to prevent relapse.",
       doctors: [
         Doctor(
           name: "Dr. Omar Issa",
@@ -1466,7 +1466,7 @@ final Map<String, List<Disease>> medicalDataEnglish = {
         "Reduced emotional expression",
         "Social withdrawal",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "Risperidone (Risperdal)",
         "Olanzapine (Zyprexa)",
         "Quetiapine (Seroquel)",
@@ -1479,7 +1479,7 @@ final Map<String, List<Disease>> medicalDataEnglish = {
     Disease(
       name: "Diabetes",
       description:
-          "A chronic metabolic disorder characterized by high blood glucose levels. Type 1: Lack of insulin production due to pancreatic cell damage (autoimmune). Type 2: Body cell resistance to insulin or insufficient production. Leads to serious complications including retinopathy, kidney disease, nerve damage, and heart disease. Management involves blood sugar monitoring, diet, exercise, and medications or insulin.",
+          "A chronic metabolic disorder characterized by high blood glucose levels. Type 1: Lack of insulin production due to pancreatic cell damage (autoimmune). Type 2: Body cell resistance to insulin or insufficient production. Leads to serious complications including retinopathy, kidney disease, nerve damage, and heart disease. Management involves blood sugar monitoring, diet, exercise, and medicines or insulin.",
       doctors: [
         Doctor(
           name: "Dr. Rami Younes",
@@ -1503,7 +1503,7 @@ final Map<String, List<Disease>> medicalDataEnglish = {
         "Unexplained weight loss",
         "Fatigue and irritability",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "Insulin (for Type 1 diabetes)",
         "Metformin (Glucophage)",
         "Glyburide (DiaBeta)",
@@ -1514,7 +1514,7 @@ final Map<String, List<Disease>> medicalDataEnglish = {
     Disease(
       name: "Hypertension and Heart Diseases",
       description:
-          "Hypertension: (The silent killer) with rarely noticeable symptoms. Stresses artery walls and increases risk of clots and strokes. Heart diseases include heart failure, angina, and arrhythmias. Contributing factors include genetics, obesity, smoking, and stress. Treatment involves lifestyle modifications, blood pressure medications, and blood thinners.",
+          "Hypertension: (The silent killer) with rarely noticeable symptoms. Stresses artery walls and increases risk of clots and strokes. Heart diseases include heart failure, angina, and arrhythmias. Contributing factors include genetics, obesity, smoking, and stress. Treatment involves lifestyle modifications, blood pressure medicines, and blood thinners.",
       doctors: [
         Doctor(
           name: "Dr. Ali Deeb",
@@ -1538,7 +1538,7 @@ final Map<String, List<Disease>> medicalDataEnglish = {
         "Chest pain",
         "Shortness of breath",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "Amlodipine (Norvasc)",
         "Losartan (Cozaar)",
         "Atenolol (Tenormin)",
@@ -1575,18 +1575,18 @@ final Map<String, List<Disease>> medicalDataEnglish = {
         "Slow to learn new skills",
         "Difficulty following instructions",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "Memory and focus enhancers if needed",
         "Omega-3 as nutritional supplement",
         "B-complex vitamins",
-        "Medications for any co-occurring disorders",
+        "Medicines for any co-occurring disorders",
         "Zinc and magnesium supplements",
       ],
     ),
     Disease(
       name: "Attention Deficit Hyperactivity Disorder (ADHD)",
       description:
-          "A neurodevelopmental disorder affecting attention control and motor activity. Characterized by difficulty concentrating, impulsivity, and inappropriate excessive movement. Negatively impacts academic performance and family/social relationships. Requires accurate diagnosis by specialists to distinguish from other behavioral issues. Treatment includes stimulant medications, behavioral therapy, and educational environment modifications.",
+          "A neurodevelopmental disorder affecting attention control and motor activity. Characterized by difficulty concentrating, impulsivity, and inappropriate excessive movement. Negatively impacts academic performance and family/social relationships. Requires accurate diagnosis by specialists to distinguish from other behavioral issues. Treatment includes stimulant medicines, behavioral therapy, and educational environment modifications.",
       doctors: [
         Doctor(
           name: "Dr. Khaled Mahmoud",
@@ -1610,7 +1610,7 @@ final Map<String, List<Disease>> medicalDataEnglish = {
         "Difficulty waiting for turn",
         "Tendency to interrupt others",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "Methylphenidate (Ritalin, Concerta)",
         "Dextroamphetamine (Adderall)",
         "Atomoxetine (Strattera)",
@@ -1645,11 +1645,11 @@ final Map<String, List<Disease>> medicalDataEnglish = {
         "Problems organizing thoughts for expression",
         "Delayed language development",
       ],
-      pharmaceutical: [
-        "Medications for underlying causes if present",
+      appropriateMedicines: [
+        "Medicines for underlying causes if present",
         "Nutritional supplements to support neurological function",
-        "Medications to improve motor coordination if needed",
-        "Anti-anxiety medications if affecting speech",
+        "Medicines to improve motor coordination if needed",
+        "Anti-anxiety medicines if affecting speech",
         "B vitamins for nervous system support",
       ],
     ),
@@ -1680,11 +1680,11 @@ final Map<String, List<Disease>> medicalDataEnglish = {
         "Memory problems",
         "Trouble solving simple problems",
       ],
-      pharmaceutical: [
+      appropriateMedicines: [
         "Growth hormone in some cases",
         "Vitamins and nutritional supplements as needed",
-        "Medications to improve neurological function",
-        "Medications for any co-occurring disorders",
+        "Medicines to improve neurological function",
+        "Medicines for any co-occurring disorders",
         "Omega-3 supplements for neurological support",
       ],
     ),

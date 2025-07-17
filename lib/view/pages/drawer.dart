@@ -7,6 +7,7 @@ import 'package:alamal/model/cacheHelper.dart';
 import 'package:alamal/model/theme_bloc.dart';
 import 'package:alamal/view/auth/login.dart';
 import 'package:alamal/view/pages/about.dart';
+import 'package:alamal/view/pages/doctor/patients.dart';
 import 'package:alamal/view/pages/my_consultations.dart';
 import 'package:alamal/view/pages/profile.dart';
 import 'package:alamal/view/pages/settings.dart';
@@ -15,7 +16,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class DrawerPage extends StatefulWidget {
-  const DrawerPage({Key? key}) : super(key: key);
+  const DrawerPage({super.key});
 
   @override
   _DrawerPageState createState() => _DrawerPageState();
@@ -61,6 +62,37 @@ class _DrawerPageState extends State<DrawerPage> {
                       indent: 16.0,
                       height: 20.0,
                     ),
+                    if (CacheHelper.getData(key: 'accountType') == 'doctor')
+                      Column(
+                        children: [
+                          MaterialButton(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 5.0,
+                            ),
+                            onPressed: () {
+                              push(context: context, page: const Patients());
+                            },
+                            child: ListTile(
+                              minLeadingWidth: 30,
+                              title: Text(
+                                "${AppLocalization.of(context)!.getTranslatedValue('patients')}",
+                                style: const TextStyle(color: Colors.white),
+                              ),
+                              leading: SvgPicture.asset(
+                                patientIcon,
+                                color: Colors.white,
+                                height: 26.0,
+                              ),
+                            ),
+                          ),
+                          const Divider(
+                            color: Colors.white54,
+                            endIndent: 20.0,
+                            indent: 16.0,
+                            height: 20.0,
+                          ),
+                        ],
+                      ),
                     if (CacheHelper.getData(key: 'accountType') != 'doctor')
                       Column(
                         children: [

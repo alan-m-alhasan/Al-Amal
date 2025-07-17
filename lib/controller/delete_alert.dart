@@ -117,7 +117,7 @@ class _DeleteAlertState extends State<DeleteAlert> {
                                 startProgress();
                               },
                       style: ButtonStyle(
-                        overlayColor: MaterialStateProperty.all(
+                        overlayColor: WidgetStateProperty.all(
                           Colors.red[700]?.withOpacity(0.2),
                         ),
                       ),
@@ -137,7 +137,7 @@ class _DeleteAlertState extends State<DeleteAlert> {
                         pop(context: context);
                       },
                       style: ButtonStyle(
-                        overlayColor: MaterialStateProperty.all(
+                        overlayColor: WidgetStateProperty.all(
                           state.color.withOpacity(0.2),
                         ),
                       ),

@@ -17,7 +17,6 @@ class DrawerCubit extends Cubit<ZoomDrawerController> {
   }
 
   void toggleDrawer() {
-    debugPrint("Toggle Drawer");
     state.toggle?.call();
   }
 }

@@ -14,7 +14,7 @@ import 'package:slidable_button/slidable_button.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 class VoiceCall extends StatefulWidget {
-  const VoiceCall({Key? key}) : super(key: key);
+  const VoiceCall({super.key});
 
   @override
   _VoiceCallState createState() => _VoiceCallState();
